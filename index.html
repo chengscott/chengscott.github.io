@@ -10,6 +10,11 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="//oss.maxcdn.com/semantic-ui/2.1.8/semantic.min.js"></script>
 	<script>
+	dataLayer = [{
+		'fbLink': 'fbClick',
+		'githubLink': 'githubClick'
+	}];
+
 	$(function() {
 		$('.masthead').visibility({
           once: false,
@@ -24,8 +29,14 @@
         // create sidebar and attach to menu open
         $('.ui.sidebar').sidebar('attach events', '.toc.item');
         // about buttons
-        $('#facebook').click(function(){ window.open("//www.facebook.com/chengcos", "_blank"); });
-        $('#github').click(function(){ window.open("//github.com/chengscott", "_blank"); });
+        $('#facebook').click(function() {
+        	window.open("//www.facebook.com/chengcos", "_blank");
+        	dataLayer.push({'fbLink': 'fbClick'});
+        });
+        $('#github').click(function() {
+        	window.open("//github.com/chengscott", "_blank");
+        	dataLayer.push({'githubLink': 'githubClick'});
+        });
     });
     </script>
 	<style>
