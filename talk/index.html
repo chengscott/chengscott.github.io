@@ -4,47 +4,12 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-	<title>Blog</title>
+	<title>Talk</title>
 
 	<link rel="stylesheet" href="//oss.maxcdn.com/semantic-ui/2.1.8/semantic.min.css">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="//oss.maxcdn.com/semantic-ui/2.1.8/semantic.min.js"></script>
 	<script>
-		function list(url, path, parent) {
-			$.getJSON(url, function(data) {
-				data = data.tree;
-				$.each(data, function(index, datum) {
-					var nextId = parent + '-' + datum.path;
-					if (datum.type == 'tree') {
-						var res = '<div class="item">'
-						+ '<i class="folder icon"></i>'
-						+ '<div class="content">'
-						+ '<div class="header">' + datum.path + '</div>'
-						+ '<div class="ui list" id="' + nextId + '"></div>'
-						+ '</div></div>';
-						$('#' + parent).html($('#' + parent).html() + res);
-						list(datum.url, path + '/' + datum.path, nextId);
-					} else {
-						var name = datum.path.slice(0, datum.path.lastIndexOf('.'));
-						var res = '<div class="item">'
-						+ '<i class="file icon"></i>'
-						+ '<div class="content">'
-						+ '<div class="header">'
-						+ '<a href="?p=' + path + '/' + name + '">' + name + '</a></div>'
-						+ '</div></div>';
-						$('#' + parent).html($('#' + parent).html() + res);
-					}
-				});
-			});
-		}
-
-		function getParameterByName(name) {
-		    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-		    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-		        results = regex.exec(location.search);
-		    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-		}
-
 		$(function() {
 			$('.masthead').visibility({
 				once: false,
@@ -58,38 +23,6 @@
 			});
 	        // create sidebar and attach to menu open
 	        $('.ui.sidebar').sidebar('attach events', '.toc.item');
-	        // article
-	        var p = getParameterByName('p');
-	        if (p == "") p = "blog";
-    	    $("#article").load(p + ".html", function(responseText, statusText, xhr) {
-    	    	if (statusText == 'error') {
-    	    		$("#article").load('error.html');
-    	    	}
-    	    });
-    	    // folder
-    	    $.getJSON('https://api.github.com/repos/chengscott/chengscott.github.io/git/refs/heads/master', function(ret) {
-    	    	$.getJSON('https://api.github.com/repos/chengscott/chengscott.github.io/git/trees/' + ret.object.sha, function(ret) {
-    	    		var blogUrl;
-    	    		ret = ret.tree;
-    	    		$.each(ret, function(index, data) {
-    	    			if (data.path == 'blog') {
-    	    				blogUrl = data.url;
-    	    				return;
-    	    			}
-    	    		});
-	    	    	$.getJSON(blogUrl, function(ret) {
-	    	    		var articleUrl;
-	    	    		ret = ret.tree;
-	    	    		$.each(ret, function(index, data) {
-	    	    			if (data.path == 'article') {
-	    	    				articleUrl = data.url;
-	    	    				return;
-	    	    			}
-	    	    		});
-	    	    		list(articleUrl, 'article', 'folderTree');
-	    	    	});
-	    	    });
-    	    });
 	    });
 	</script>
 	<style>
@@ -172,18 +105,18 @@
 	<div class="ui large top fixed hidden menu">
 		<div class="ui container">
 			<a class="item" href="..">Home</a>
-			<a class="active item" href="../blog/">Blog</a>
+			<a class="item" href="../blog/">Blog</a>
 			<a class="item" href="../project/">Project</a>
-			<a class="item" href="../talk/">Talk</a>
+			<a class="active item" href="#">Talk</a>
 		</div>
 	</div>
 
 	<!-- Sidebar Menu -->
 	<div class="ui vertical sidebar menu">
 		<a class="item" href="..">Home</a>
-		<a class="active item" href="../blog/">Blog</a>
+		<a class="item" href="../blog/">Blog</a>
 		<a class="item" href="../project/">Project</a>
-		<a class="item" href="../talk/">Talk</a>
+		<a class="active item" href="#">Talk</a>
 	</div>
 
 	<!-- Page Contents -->
@@ -195,17 +128,24 @@
 						<i class="sidebar icon"></i>
 					</a>
 					<a class="item" href="..">Home</a>
-					<a class="active item" href="../blog/">Blog</a>
+					<a class="item" href="../blog/">Blog</a>
 					<a class="item" href="../project/">Project</a>
-					<a class="item" href="../talk/">Talk</a>
+					<a class="active item" href="#">Talk</a>
 				</div>
 			</div>
 		</div>
-		
-		<div class="ui grid">
-		<div class="two column grid"></div>
-		<div class="two column grid"><br><div class="ui list" id="folderTree"></div></div>
-		<div class="twelve wide column" id="article"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+
+		<div class="ui vertical stripe segment">
+			<div class="ui middle aligned stackable grid container">
+				<h2 class="ui header">
+				  <i class="android icon"></i>
+				  <div class="content">
+				    PCSHJQ APP Product Launch <a href="//drive.google.com/file/d/0B-XnGimZpoDrY2VZRl82WGNobEk/view?usp=sharing" target="_blank"><i class="cloud download icon"></i></a>
+				    <div class="sub header">2015/08/25 at PCSH orientation</div>
+
+				  </div>
+				</h2>
+			</div>
 		</div>
 
 		<div class="ui inverted vertical footer segment">
