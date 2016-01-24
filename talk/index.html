@@ -72,13 +72,15 @@
 		.footer.segment {
 			padding: 5em 0em;
 		}
-		.ui.footer {
-			position: absolute;
-			bottom: 0;
-			width: 100%;
-		}
 		.secondary.pointing.menu .toc.item {
 			display: none;
+		}
+		@media screen and (min-height: 460px) {
+			.ui.footer {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+			}
 		}
 		@media only screen and (max-width: 700px) {
 			.ui.fixed.menu {
@@ -142,14 +144,25 @@
 
 		<div class="ui vertical stripe segment">
 			<div class="ui middle aligned stackable grid container">
-				<h2 class="ui header">
-				  <i class="android icon"></i>
-				  <div class="content">
-				    PCSHJQ APP Product Launch <a href="//drive.google.com/file/d/0B-XnGimZpoDrY2VZRl82WGNobEk/view?usp=sharing" target="_blank"><i class="cloud download icon"></i></a>
-				    <div class="sub header">2015/08/25 at PCSH orientation</div>
-
-				  </div>
-				</h2>
+				<div class="row">
+					<div class="eight wide column">
+						<h3 class="ui header">
+							<i class="android icon"></i>
+							<div class="content">
+								Android & JAVA
+								<div class="sub header">2016/02/01~05 at PCSHIC</div>
+							</div>
+						</h3>
+						<h3 class="ui header">
+							<i class="android icon"></i>
+							<div class="content">
+								PCSHJQ APP Product Launch
+								<a href="//drive.google.com/file/d/0B-XnGimZpoDrY2VZRl82WGNobEk/view?usp=sharing" target="_blank"><i class="cloud download icon"></i></a>
+								<div class="sub header">2015/08/25 at PCSH orientation</div>
+							</div>
+						</h3>
+					</div>
+				</div>
 			</div>
 		</div>
 
