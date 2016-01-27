@@ -10,6 +10,13 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="//oss.maxcdn.com/semantic-ui/2.1.8/semantic.min.js"></script>
 	<script>
+		function getParameterByName(name) {
+		    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+		    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+		        results = regex.exec(location.search);
+		    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+		}
+
 		$(function() {
 			$('.masthead').visibility({
 				once: false,
@@ -23,6 +30,14 @@
 			});
 	        // create sidebar and attach to menu open
 	        $('.ui.sidebar').sidebar('attach events', '.toc.item');
+	        // talk
+	        var t = 'page/' + getParameterByName('t') + '/index.html';
+	        if (t == 'page//index.html') t = 'talk.html';
+    	    $('#talk').load(t, function(responseText, statusText, xhr) {
+    	    	if (statusText == 'error') {
+    	    		$('#talk').load('error.html');
+    	    	}
+    	    });
 	    });
 	</script>
 	<style>
@@ -79,6 +94,7 @@
 			.ui.footer {
 				position: absolute;
 				bottom: 0;
+				height: 230px;
 				width: 100%;
 			}
 		}
@@ -114,7 +130,7 @@
 			<a class="item" href="..">Home</a>
 			<a class="item" href="../blog/">Blog</a>
 			<a class="item" href="../project/">Project</a>
-			<a class="active item" href="#">Talk</a>
+			<a class="active item" href="../talk/">Talk</a>
 		</div>
 	</div>
 
@@ -123,12 +139,12 @@
 		<a class="item" href="..">Home</a>
 		<a class="item" href="../blog/">Blog</a>
 		<a class="item" href="../project/">Project</a>
-		<a class="active item" href="#">Talk</a>
+		<a class="active item" href="../talk/">Talk</a>
 	</div>
 
 	<!-- Page Contents -->
 	<div class="pusher">
-		<div class="ui vertical masthead center aligned segment">
+		<div class="ui vertical masthead center aligned segment" style="border-bottom: none;">
 			<div class="ui container">
 				<div class="ui large secondary pointing menu">
 					<a class="toc item">
@@ -137,35 +153,12 @@
 					<a class="item" href="..">Home</a>
 					<a class="item" href="../blog/">Blog</a>
 					<a class="item" href="../project/">Project</a>
-					<a class="active item" href="#">Talk</a>
+					<a class="active item" href="../talk/">Talk</a>
 				</div>
 			</div>
 		</div>
 
-		<div class="ui vertical stripe segment">
-			<div class="ui middle aligned stackable grid container">
-				<div class="row">
-					<div class="eight wide column">
-						<h3 class="ui header">
-							<i class="android icon"></i>
-							<div class="content">
-								Android & JAVA
-								<a href="//drive.google.com/folderview?id=0B-XnGimZpoDrSUtBZk96ZzktX3c&usp=sharing" target="_blank"><i class="cloud download icon"></i></a>
-								<div class="sub header">2016/02/01~05 at PCSHIC</div>
-							</div>
-						</h3>
-						<h3 class="ui header">
-							<i class="android icon"></i>
-							<div class="content">
-								PCSHJQ APP Product Launch
-								<a href="//drive.google.com/file/d/0B-XnGimZpoDrY2VZRl82WGNobEk/view?usp=sharing" target="_blank"><i class="cloud download icon"></i></a>
-								<div class="sub header">2015/08/25 at PCSH orientation</div>
-							</div>
-						</h3>
-					</div>
-				</div>
-			</div>
-		</div>
+		<div id="talk" style="padding-bottom: 230px;"></div>
 
 		<div class="ui inverted vertical footer segment">
 			<div class="ui container">
@@ -190,7 +183,7 @@
 						<h4 class="ui inverted header">Site</h4>
 						<div class="ui inverted link list">
 							<a href="sitemap/" class="item">Sitemap</a>
-							<a href="#" class="item">Error Report</a>
+							<a href="//docs.google.com/forms/d/1M2ymSxmWBVXciuhpzWA6m2oDH2Qdjsj60djTTupKaOo/viewform" target="_blank" class="item">Error Report</a>
 						</div>
 					</div>
 				</div>

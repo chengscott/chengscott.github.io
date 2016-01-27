@@ -60,10 +60,10 @@
 	        $('.ui.sidebar').sidebar('attach events', '.toc.item');
 	        // article
 	        var p = getParameterByName('p');
-	        if (p == "") p = "blog";
-    	    $("#article").load(p + ".html", function(responseText, statusText, xhr) {
+	        if (p == '') p = 'blog';
+    	    $('#article').load(p + '.html', function(responseText, statusText, xhr) {
     	    	if (statusText == 'error') {
-    	    		$("#article").load('error.html');
+    	    		$('#article').load('error.html');
     	    	}
     	    });
     	    // folder
@@ -142,6 +142,14 @@
 		.secondary.pointing.menu .toc.item {
 			display: none;
 		}
+		@media screen and (min-height: 460px) {
+			.ui.footer {
+				position: absolute;
+				bottom: 0;
+				height: 230px;
+				width: 100%;
+			}
+		}
 		@media only screen and (max-width: 700px) {
 			.ui.fixed.menu {
 				display: none !important;
@@ -188,7 +196,7 @@
 
 	<!-- Page Contents -->
 	<div class="pusher">
-		<div class="ui vertical masthead center aligned segment">
+		<div class="ui vertical masthead center aligned segment" style="border-bottom: none;">
 			<div class="ui container">
 				<div class="ui large secondary pointing menu">
 					<a class="toc item">
@@ -202,10 +210,10 @@
 			</div>
 		</div>
 		
-		<div class="ui grid">
-		<div class="two column grid"></div>
-		<div class="two column grid"><br><div class="ui list" id="folderTree"></div></div>
-		<div class="twelve wide column" id="article"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+		<div class="ui grid" style="padding-bottom: 230px;">
+			<div class="two column grid"></div>
+			<div class="two column grid"><br><div class="ui list" id="folderTree"></div></div>
+			<div class="twelve wide column" id="article"></div>
 		</div>
 
 		<div class="ui inverted vertical footer segment">
@@ -231,7 +239,7 @@
 						<h4 class="ui inverted header">Site</h4>
 						<div class="ui inverted link list">
 							<a href="sitemap/" class="item">Sitemap</a>
-							<a href="#" class="item">Error Report</a>
+							<a href="//docs.google.com/forms/d/1M2ymSxmWBVXciuhpzWA6m2oDH2Qdjsj60djTTupKaOo/viewform" target="_blank" class="item">Error Report</a>
 						</div>
 					</div>
 				</div>
