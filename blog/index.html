@@ -10,87 +10,95 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="//oss.maxcdn.com/semantic-ui/2.1.8/semantic.min.js"></script>
 	<script>
-		function list(url, path, parent) {
-			$.getJSON(url, function(data) {
-				data = data.tree;
-				$.each(data, function(index, datum) {
-					var nextId = parent + '-' + datum.path;
-					if (datum.type == 'tree') {
-						var res = '<div class="item">'
-						+ '<i class="folder icon"></i>'
-						+ '<div class="content">'
-						+ '<div class="header">' + datum.path + '</div>'
-						+ '<div class="ui list" id="' + nextId + '"></div>'
-						+ '</div></div>';
-						$('#' + parent).html($('#' + parent).html() + res);
-						list(datum.url, path + '/' + datum.path, nextId);
-					} else {
-						var name = datum.path.slice(0, datum.path.lastIndexOf('.'));
-						var res = '<div class="item">'
-						+ '<i class="file icon"></i>'
-						+ '<div class="content">'
-						+ '<div class="header">'
-						+ '<a href="?p=' + path + '/' + name + '">' + name + '</a></div>'
-						+ '</div></div>';
-						$('#' + parent).html($('#' + parent).html() + res);
-					}
-				});
-			});
-		}
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-		function getParameterByName(name) {
-		    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-		    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-		        results = regex.exec(location.search);
-		    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-		}
+	ga('create', 'UA-73021613-1', 'auto');
+	ga('send', 'pageview');
 
-		$(function() {
-			$('.masthead').visibility({
-				once: false,
-				onBottomPassed: function() {
-					$('.fixed.menu').transition('fade in');
-				},
-				onBottomPassedReverse: function() {
-					$('.fixed.menu').transition('fade out');
+	function list(url, path, parent) {
+		$.getJSON(url, function(data) {
+			data = data.tree;
+			$.each(data, function(index, datum) {
+				var nextId = parent + '-' + datum.path;
+				if (datum.type == 'tree') {
+					var res = '<div class="item">'
+					+ '<i class="folder icon"></i>'
+					+ '<div class="content">'
+					+ '<div class="header">' + datum.path + '</div>'
+					+ '<div class="ui list" id="' + nextId + '"></div>'
+					+ '</div></div>';
+					$('#' + parent).html($('#' + parent).html() + res);
+					list(datum.url, path + '/' + datum.path, nextId);
+				} else {
+					var name = datum.path.slice(0, datum.path.lastIndexOf('.'));
+					var res = '<div class="item">'
+					+ '<i class="file icon"></i>'
+					+ '<div class="content">'
+					+ '<div class="header">'
+					+ '<a href="?p=' + path + '/' + name + '">' + name + '</a></div>'
+					+ '</div></div>';
+					$('#' + parent).html($('#' + parent).html() + res);
 				}
-
 			});
-	        // create sidebar and attach to menu open
-	        $('.ui.sidebar').sidebar('attach events', '.toc.item');
-	        // article
-	        var p = getParameterByName('p');
-	        if (p == '') p = 'blog';
-    	    $('#article').load(p + '.html', function(responseText, statusText, xhr) {
-    	    	if (statusText == 'error') {
-    	    		$('#article').load('error.html');
-    	    	}
-    	    });
-    	    // folder
-    	    $.getJSON('https://api.github.com/repos/chengscott/chengscott.github.io/git/refs/heads/master', function(ret) {
-    	    	$.getJSON('https://api.github.com/repos/chengscott/chengscott.github.io/git/trees/' + ret.object.sha, function(ret) {
-    	    		var blogUrl;
+		});
+	}
+
+	function getParameterByName(name) {
+	    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+	    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+	        results = regex.exec(location.search);
+	    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	}
+
+	$(function() {
+		$('.masthead').visibility({
+			once: false,
+			onBottomPassed: function() {
+				$('.fixed.menu').transition('fade in');
+			},
+			onBottomPassedReverse: function() {
+				$('.fixed.menu').transition('fade out');
+			}
+
+		});
+        // create sidebar and attach to menu open
+        $('.ui.sidebar').sidebar('attach events', '.toc.item');
+        // article
+        var p = getParameterByName('p');
+        if (p == '') p = 'blog';
+	    $('#article').load(p + '.html', function(responseText, statusText, xhr) {
+	    	if (statusText == 'error') {
+	    		$('#article').load('error.html');
+	    	}
+	    });
+	    // folder
+	    $.getJSON('https://api.github.com/repos/chengscott/chengscott.github.io/git/refs/heads/master', function(ret) {
+	    	$.getJSON('https://api.github.com/repos/chengscott/chengscott.github.io/git/trees/' + ret.object.sha, function(ret) {
+	    		var blogUrl;
+	    		ret = ret.tree;
+	    		$.each(ret, function(index, data) {
+	    			if (data.path == 'blog') {
+	    				blogUrl = data.url;
+	    				return;
+	    			}
+	    		});
+    	    	$.getJSON(blogUrl, function(ret) {
+    	    		var articleUrl;
     	    		ret = ret.tree;
     	    		$.each(ret, function(index, data) {
-    	    			if (data.path == 'blog') {
-    	    				blogUrl = data.url;
+    	    			if (data.path == 'article') {
+    	    				articleUrl = data.url;
     	    				return;
     	    			}
     	    		});
-	    	    	$.getJSON(blogUrl, function(ret) {
-	    	    		var articleUrl;
-	    	    		ret = ret.tree;
-	    	    		$.each(ret, function(index, data) {
-	    	    			if (data.path == 'article') {
-	    	    				articleUrl = data.url;
-	    	    				return;
-	    	    			}
-	    	    		});
-	    	    		list(articleUrl, 'article', 'folderTree');
-	    	    	});
-	    	    });
+    	    		list(articleUrl, 'article', 'folderTree');
+    	    	});
     	    });
 	    });
+    });
 	</script>
 	<style>
 		.hidden.menu {

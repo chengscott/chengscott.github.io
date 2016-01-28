@@ -10,20 +10,28 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="//oss.maxcdn.com/semantic-ui/2.1.8/semantic.min.js"></script>
 	<script>
-		$(function() {
-			$('.masthead').visibility({
-				once: false,
-				onBottomPassed: function() {
-					$('.fixed.menu').transition('fade in');
-				},
-				onBottomPassedReverse: function() {
-					$('.fixed.menu').transition('fade out');
-				}
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-			});
-	        // create sidebar and attach to menu open
-	        $('.ui.sidebar').sidebar('attach events', '.toc.item');
-	    });
+	ga('create', 'UA-73021613-1', 'auto');
+	ga('send', 'pageview');
+	
+	$(function() {
+		$('.masthead').visibility({
+			once: false,
+			onBottomPassed: function() {
+				$('.fixed.menu').transition('fade in');
+			},
+			onBottomPassedReverse: function() {
+				$('.fixed.menu').transition('fade out');
+			}
+
+		});
+        // create sidebar and attach to menu open
+        $('.ui.sidebar').sidebar('attach events', '.toc.item');
+    });
 	</script>
 	<style>
 		.hidden.menu {
