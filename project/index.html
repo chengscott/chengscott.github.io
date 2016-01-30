@@ -88,6 +88,11 @@
 		.secondary.pointing.menu .toc.item {
 			display: none;
 		}
+		@media only screen and (max-width: 900px) {
+			.ui.right.rail {
+				display: none;
+			}
+		}
 		@media only screen and (max-width: 700px) {
 			.ui.fixed.menu {
 				display: none !important;
@@ -151,7 +156,7 @@
 		<div class="ui vertical stripe segment">
 			<div class="ui middle aligned stackable grid container">
 				<div class="ui dividing right rail" style="min-height: 248px;">
-					<div class="ui sticky fixed" style="left: 1330px; width: 283px !important; height: 248px !important; margin-top: 30px;">
+					<div class="ui sticky fixed" style="right: 0px !important; width: 283px !important; height: 248px !important; margin-top: 30px;">
 						<h4 class="ui header">Project</h4>
 						<div class="ui vertical following text menu" data-uk-scrollspy-nav="{closest: 'a', cls: 'active'}">
 							<a class="item" href="#myprojects">My Projects</a>
