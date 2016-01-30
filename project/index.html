@@ -9,6 +9,8 @@
 	<link rel="stylesheet" href="//oss.maxcdn.com/semantic-ui/2.1.8/semantic.min.css">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="//oss.maxcdn.com/semantic-ui/2.1.8/semantic.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/uikit/2.24.3/js/uikit.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/uikit/2.24.3/js/core/scrollspy.min.js"></script>
 	<script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -34,6 +36,9 @@
     });
 	</script>
 	<style>
+		.ui.text.menu .active.item {
+			font-weight: bold;
+		}
 		.hidden.menu {
 			display: none;
 		}
@@ -148,19 +153,15 @@
 				<div class="ui dividing right rail" style="min-height: 248px;">
 					<div class="ui sticky fixed" style="left: 1330px; width: 283px !important; height: 248px !important; margin-top: 30px;">
 						<h4 class="ui header">Project</h4>
-						<div class="ui vertical following fluid accordion text menu">
-							<div class="item active">
-								<div class="content menu active">
-									<a class="item active" href="#">My Projects</a>
-									<a class="item" href="#">Organiztions</a>
-									<a class="item" href="#">My Gadgets</a>
-									<a class="item" href="#">Dedicated Projects</a>
-								</div>
-							</div>
+						<div class="ui vertical following text menu" data-uk-scrollspy-nav="{closest: 'a', cls: 'active'}">
+							<a class="item" href="#myprojects">My Projects</a>
+							<a class="item" href="#organizations">Organiztions</a>
+							<a class="item" href="#mygadgets">My Gadgets</a>
+							<a class="item" href="#dedicatedprojects">Dedicated Projects</a>
 						</div>
 					</div>
 				</div>
-				<h2 class="ui center aligned icon header">
+				<h2 class="ui center aligned icon header" id="myprojects">
 					<i class="circular github icon"></i>
 					<div class="content">My Projects</div>
 				</h2>
@@ -204,7 +205,7 @@
 						<p>Customized web browser with IE core.</p>
 					</div>
 				</div>
-				<h2 class="ui center aligned icon header">
+				<h2 class="ui center aligned icon header" id="organizations">
 					<i class="circular users icon"></i>
 					<div class="content">Organizations</div>
 				</h2>
@@ -238,7 +239,7 @@
 						<p>An easy platform to find ishiwu.</p>
 					</div>
 				</div>
-				<h2 class="ui center aligned icon header">
+				<h2 class="ui center aligned icon header" id="mygadgets">
 					<i class="circular github alternate icon"></i>
 					<div class="content">My Gadgets</div>
 				</h2>
@@ -275,7 +276,7 @@
 						<p>A calendar with yahoo weather, notes and alarm clock.</p>
 					</div>
 				</div>
-				<h2 class="ui center aligned icon header">
+				<h2 class="ui center aligned icon header" id="dedicatedprojects">
 					<i class="circular fork icon"></i>
 					<div class="content">Dedicated Projects</div>
 				</h2>
