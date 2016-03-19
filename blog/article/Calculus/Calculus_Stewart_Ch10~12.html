@@ -1,0 +1,27 @@
+<script src="js/pdf.js"></script>
+<script>
+	var docids = {
+		'Ch10': '0B-XnGimZpoDrMklXRjJIYl8zSWs',
+		'Ch11': '0B-XnGimZpoDrVVN1UUNFNkpjOVU',
+		'Ch11 Problem Plus': '0B-XnGimZpoDrYzVVY3lHOTNHMHc'
+	};
+
+	$(function() {
+		$('#pdftabs .item').on('click', function(e) {
+			$('#pdftabs .item').removeClass('active');
+			$(this).addClass('active');
+			loadPDF(docids[$(this).text()]);
+		})
+		loadPDF(docids[$('#pdftabs .active').text()]);
+	});
+</script>
+
+<div class="ui text container">
+	<h3 class="ui header">Calculus Stewart Ch10 ~ Ch12</h3>
+	<div class="ui top stackable attached tabular menu" id="pdftabs">
+		<a class="item active">Ch10</a>
+		<a class="item">Ch11</a>
+		<a class="item">Ch11 Problem Plus</a>
+	</div>
+	<iframe id="pdf" width="100%" height="800" style="border: none;"></iframe>
+</div>
