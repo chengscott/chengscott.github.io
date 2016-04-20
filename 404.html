@@ -101,6 +101,13 @@
 		.secondary.pointing.menu .toc.item {
 			display: none;
 		}
+		@media screen and (min-width: 770px) {
+			.ui.footer {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+			}
+		}
 		@media only screen and (max-width: 700px) {
 			.ui.fixed.menu {
 				display: none !important;
@@ -130,7 +137,7 @@
 	<!-- Following Menu -->
 	<div class="ui large top fixed hidden menu">
 		<div class="ui container">
-			<a class="active item" href="#">Home</a>
+			<a class="active item" href="index.html">Home</a>
 			<a class="item" href="blog/">Blog</a>
 			<a class="item" href="project/">Project</a>
 			<a class="item" href="talk/">Talk</a>
@@ -139,7 +146,7 @@
 
 	<!-- Sidebar Menu -->
 	<div class="ui vertical sidebar menu">
-		<a class="active item" href="#">Home</a>
+		<a class="active item" href="index.html">Home</a>
 		<a class="item" href="blog/">Blog</a>
 		<a class="item" href="project/">Project</a>
 		<a class="item" href="talk/">Talk</a>
@@ -147,14 +154,14 @@
 
 	<!-- Page Contents -->
 	<div class="pusher">
-		<div class="ui inverted vertical masthead center aligned segment" style="background: url(img/cover.jpg) no-repeat center;">
+		<div class="ui inverted vertical masthead center aligned segment" style="background: url(img/sea.jpg) no-repeat center;">
 
 			<div class="ui container">
 				<div class="ui large secondary pointing menu">
 					<a class="toc item">
 						<i class="sidebar icon"></i>
 					</a>
-					<a class="active item" href="#">Home</a>
+					<a class="active item" href="index.html">Home</a>
 					<a class="item" href="blog/">Blog</a>
 					<a class="item" href="project/">Project</a>
 					<a class="item" href="talk/">Talk</a>
@@ -163,90 +170,9 @@
 
 			<div class="ui text container">
 				<h1 class="ui inverted header">
-					<img class="ui small circular bordered image" src="img/face.jpg">
-					<div lang="zh-Hant" class="content">鄭余玄 Home</div>
+					<div lang="zh-Hant" class="content">404</div>
 				</h1>
-				<h2>About chengscott</h2>
-				<div class="ui animated fade huge facebook button" id="facebook">
-			        <div class="visible content"><i class="facebook icon"></i>Facebook</div>
-			        <div lang="zh-Hant" class="hidden content"><i class="facebook icon"></i>鄭余玄</div>
-			    </div>
-				<div class="ui animated fade huge github button" id="github">
-			        <div class="visible content"><i class="github icon"></i>Github</div>
-			        <div class="hidden content"><i class="github icon"></i>chengscott</div>
-			    </div>
-			</div>
-		</div>
-
-		<div class="ui vertical stripe segment">
-			<div class="ui middle aligned stackable grid container">
-				<div class="row">
-					<div class="eight wide column">
-						<h3 class="ui header">
-							<i class="code icon"></i>
-							<div class="content">A brief background</div>
-						</h3>
-						<p>Programming is the thing that I'd like to stick to for day in, day out, not just for a week, but for years. I have passion in coding and perserverance for debugging. I always work really hard to make that future a reality.</p>
-						<h3 class="ui header">
-							<i class="student icon"></i>
-							<div class="content">Academic background</div>
-						</h3>
-						<p>
-							<table class="ui single line table">
-								<tbody>
-									<tr>
-										<td>2015 -</td>
-										<td><a hreflang="zh-Hant" href="//www.math.nthu.edu.tw/" target="_blank">Department of Mathematics</a>, <a hreflang="zh-Hant" href="//www.nthu.edu.tw/" target="_blank">National Tsing Hua University</a></td>
-									</tr>
-									<tr>
-										<td>2012 - 2015</td>
-										<td><a hreflang="zh-Hant" href="//www.pcsh.ntpc.edu.tw/" target="_blank">Panchiao Senior High School</a></td>
-									</tr>
-								</tbody>
-							</table>
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="ui vertical stripe quote segment">
-			<div class="ui equal width stackable internally celled grid">
-				<div class="center aligned row">
-					<div lang="zh-Hant" class="teal column">
-						<h3><i class="left quote icon"></i>沒有挫折的熱情沒有價值</h3>
-						<p>─江振誠</p>
-					</div>
-					<div class="olive column">
-						<h3><i class="left quote icon"></i>I can accept failure, everyone fails at something.<br>But I can't accept not trying.</h3>
-						<p>─Michael Jeffrey Jordan</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="ui vertical stripe segment">
-			<div class="ui text container">
-				<h4 class="ui horizontal header divider">News</h4>
-				<h3 lang="zh-Hant" class="ui header">Android 強大網路流 - Google Volley 介紹</h3>
-				<p lang="zh-Hant">
-					4/24 at Hsinchu Tech Chat Group @ NTHU
-					<br><a hreflang="zh-Hant" href="talk/?t=Google_Volley_Intro">Talk 網址</a> <a hreflang="zh-Hant" href="https://goo.gl/H3QYDy" target="_blank">Facebook 活動網址</a>
-				</p>
-				<h3 lang="zh-Hant" class="ui header">Android 讀書會</h3>
-				<p lang="zh-Hant">
-					3/27, 4/17 晚上6:00~9:00 Java 程式設計
-					<br>5/8, 5/15, 5/22, 5/29 晚上6:00~9:00 Android 手機程式設計
-					<br><a hreflang="zh-Hant" href="//nthuion.github.io">課程網址</a>
-				</p>
-				<h3 lang="zh-Hant" class="ui header">歡樂寒假營</h3>
-				<p lang="zh-Hant">
-					2/1, 2/2 上午9:00~12:00 Java 程式設計
-					<br>2/3, 2/4, 2/5 下午1:00~5:30 Android 手機程式設計
-					<br><a hreflang="zh-Hant" href="//goo.gl/forms/dYvggaKYzH" target="_blank">報名網址</a> <a hreflang="zh-Hant" href="talk/?t=Android_and_Java">課程網址</a>
-					<br>這五天亂入資訊社歡樂寒假營的講者，都是「府中小吃趣」的作者喔!!
-					<br>報名之後，請記得到課程網址，下載課程相關檔案。
-				</p>
+				<h2>Not Found</h2>
 			</div>
 		</div>
 
