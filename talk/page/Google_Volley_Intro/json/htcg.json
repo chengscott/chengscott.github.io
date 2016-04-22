@@ -1,0 +1,32 @@
+﻿{
+  "Android 強大網路流 - Google Volley 介紹": {
+    "date": "Sunday, 19 April 2016 at 19:00",
+    "place": "台達館617",
+    "host": "chengscott"
+  },
+  "談談 OCR 那回事": {
+    "date": "Sunday, 10 April 2016 at 19:00",
+    "place": "台達館617",
+    "host": "hydai"
+  },
+  "[Tutorial] 來玩玩 Docker 吧！": {
+    "date": "Sunday, 15 November 2015 at 18:30",
+    "place": "資電館 323 mac 教室",
+    "host" : "高粱"
+  },
+  "[社課] Vim 由淺入淺": {
+    "date": "Sunday, 8 November 2015 at 19:00",
+    "place": "清大資電館 323 mac 教室",
+    "host" : "hydai"
+  },
+  "[社課] 連哈秋都懂得 Git 教學": {
+    "date": "Sunday, 4 October 2015 at 18:30",
+    "place": "資電館 323 mac 教室",
+    "host" : "hydai"
+  },
+  "[Talk]NTHUCourse 的開發甘苦": {
+    "date": "Sunday, 20 September 2015 at 19:00",
+    "place": "資電館 323 mac 教室",
+    "host" : "hydai"
+  }
+}
