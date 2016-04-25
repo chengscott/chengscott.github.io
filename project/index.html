@@ -1,380 +1,380 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-	<meta name="google-site-verification" content="f3txyGzdHNConuCa-eu0H_UCAZ80WlfuvDoE1XDuZJM" />
-	<meta name="description" content="鄭余玄的專案" />
-	<meta name="theme-color" content="#1976d2">
-	<meta name="msapplication-TileColor" content="#1976d2">
-	<meta name="msapplication-TileImage" content="../img/icon/ms-icon-144x144.png">
-	<title>Project</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="google-site-verification" content="f3txyGzdHNConuCa-eu0H_UCAZ80WlfuvDoE1XDuZJM" />
+    <meta name="description" content="鄭余玄的專案" />
+    <meta name="theme-color" content="#1976d2">
+    <meta name="msapplication-TileColor" content="#1976d2">
+    <meta name="msapplication-TileImage" content="../img/icon/ms-icon-144x144.png">
+    <title>Project</title>
 
-	<link rel="icon" type="image/png" sizes="192x192"  href="../img/icon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="../img/icon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="../img/icon/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="../img/icon/favicon-16x16.png">
-	<link rel="manifest" href="../img/icon/manifest.json">
-	<link rel="stylesheet" href="//oss.maxcdn.com/semantic-ui/2.1.8/semantic.min.css">
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="//oss.maxcdn.com/semantic-ui/2.1.8/semantic.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/uikit/2.24.3/js/uikit.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/uikit/2.24.3/js/core/scrollspy.min.js"></script>
-	<script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <link rel="icon" type="image/png" sizes="192x192"  href="../img/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../img/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/icon/favicon-16x16.png">
+    <link rel="manifest" href="../img/icon/manifest.json">
+    <link rel="stylesheet" href="//oss.maxcdn.com/semantic-ui/2.1.8/semantic.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//oss.maxcdn.com/semantic-ui/2.1.8/semantic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/uikit/2.24.3/js/uikit.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/uikit/2.24.3/js/core/scrollspy.min.js"></script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	ga('create', 'UA-73021613-1', 'auto');
-	ga('send', 'pageview');
-	
-	$(function() {
-		$('.masthead').visibility({
-			once: false,
-			onBottomPassed: function() {
-				$('.fixed.menu').transition('fade in');
-			},
-			onBottomPassedReverse: function() {
-				$('.fixed.menu').transition('fade out');
-			}
+    ga('create', 'UA-73021613-1', 'auto');
+    ga('send', 'pageview');
+    
+    $(function() {
+        $('.masthead').visibility({
+            once: false,
+            onBottomPassed: function() {
+                $('.fixed.menu').transition('fade in');
+            },
+            onBottomPassedReverse: function() {
+                $('.fixed.menu').transition('fade out');
+            }
 
-		});
+        });
         // create sidebar and attach to menu open
         $('.ui.sidebar').sidebar('attach events', '.toc.item');
     });
-	</script>
-	<style>
-		.ui.text.menu .active.item {
-			font-weight: bold;
-		}
-		.hidden.menu {
-			display: none;
-		}
-		.masthead.segment {
-			min-height: 70px;
-			padding: 1em 0em;
-		}
-		.masthead .logo.item img {
-			margin-right: 1em;
-		}
-		.masthead h1.ui.header {
-			margin-top: 3em;
-			margin-bottom: 0em;
-			font-size: 4em;
-			font-weight: normal;
-		}
-		.masthead h2 {
-			font-size: 1.7em;
-			font-weight: normal;
-		}
-		.ui.vertical.stripe {
-			padding: 4em 0em;
-		}
-		.ui.vertical.stripe h3 {
-			font-size: 2em;
-		}
-		.ui.vertical.stripe .button + h3,
-		.ui.vertical.stripe p + h3 {
-			margin-top: 1em;
-		}
-		.ui.vertical.stripe p {
-			font-size: 1.33em;
-		}
-		.ui.vertical.stripe .horizontal.divider {
-			margin: 3em 0em;
-		}
-		.quote.stripe.segment {
-			padding: 0em;
-		}
-		.quote.stripe.segment .grid .column {
-			padding-top: 5em;
-			padding-bottom: 5em;
-		}
-		.footer.segment {
-			padding: 5em 0em;
-		}
-		.secondary.pointing.menu .toc.item {
-			display: none;
-		}
-		@media only screen and (max-width: 900px) {
-			.ui.right.rail {
-				display: none;
-			}
-		}
-		@media only screen and (max-width: 700px) {
-			.ui.fixed.menu {
-				display: none !important;
-			}
-			.secondary.pointing.menu .item,
-			.secondary.pointing.menu .menu {
-				display: none;
-			}
-			.secondary.pointing.menu .toc.item {
-				display: block;
-			}
-			.masthead.segment {
-				min-height: 35px;
-			}
-			.masthead h1.ui.header {
-				font-size: 2em;
-				margin-top: 1.5em;
-			}
-			.masthead h2 {
-				margin-top: 0.5em;
-				font-size: 1.5em;
-			}
-		}
-	</style>
+    </script>
+    <style>
+        .ui.text.menu .active.item {
+            font-weight: bold;
+        }
+        .hidden.menu {
+            display: none;
+        }
+        .masthead.segment {
+            min-height: 70px;
+            padding: 1em 0em;
+        }
+        .masthead .logo.item img {
+            margin-right: 1em;
+        }
+        .masthead h1.ui.header {
+            margin-top: 3em;
+            margin-bottom: 0em;
+            font-size: 4em;
+            font-weight: normal;
+        }
+        .masthead h2 {
+            font-size: 1.7em;
+            font-weight: normal;
+        }
+        .ui.vertical.stripe {
+            padding: 4em 0em;
+        }
+        .ui.vertical.stripe h3 {
+            font-size: 2em;
+        }
+        .ui.vertical.stripe .button + h3,
+        .ui.vertical.stripe p + h3 {
+            margin-top: 1em;
+        }
+        .ui.vertical.stripe p {
+            font-size: 1.33em;
+        }
+        .ui.vertical.stripe .horizontal.divider {
+            margin: 3em 0em;
+        }
+        .quote.stripe.segment {
+            padding: 0em;
+        }
+        .quote.stripe.segment .grid .column {
+            padding-top: 5em;
+            padding-bottom: 5em;
+        }
+        .footer.segment {
+            padding: 5em 0em;
+        }
+        .secondary.pointing.menu .toc.item {
+            display: none;
+        }
+        @media only screen and (max-width: 900px) {
+            .ui.right.rail {
+                display: none;
+            }
+        }
+        @media only screen and (max-width: 700px) {
+            .ui.fixed.menu {
+                display: none !important;
+            }
+            .secondary.pointing.menu .item,
+            .secondary.pointing.menu .menu {
+                display: none;
+            }
+            .secondary.pointing.menu .toc.item {
+                display: block;
+            }
+            .masthead.segment {
+                min-height: 35px;
+            }
+            .masthead h1.ui.header {
+                font-size: 2em;
+                margin-top: 1.5em;
+            }
+            .masthead h2 {
+                margin-top: 0.5em;
+                font-size: 1.5em;
+            }
+        }
+    </style>
 </head>
-<body>	
-	<!-- Following Menu -->
-	<div class="ui large top fixed hidden menu">
-		<div class="ui container">
-			<a class="item" href="..">Home</a>
-			<a class="item" href="../blog/">Blog</a>
-			<a class="active item" href="#">Project</a>
-			<a class="item" href="../talk/">Talk</a>
-		</div>
-	</div>
+<body>    
+    <!-- Following Menu -->
+    <div class="ui large top fixed hidden menu">
+        <div class="ui container">
+            <a class="item" href="..">Home</a>
+            <a class="item" href="../blog/">Blog</a>
+            <a class="active item" href="#">Project</a>
+            <a class="item" href="../talk/">Talk</a>
+        </div>
+    </div>
 
-	<!-- Sidebar Menu -->
-	<div class="ui vertical sidebar menu">
-		<a class="item" href="..">Home</a>
-		<a class="item" href="../blog/">Blog</a>
-		<a class="active item" href="#">Project</a>
-		<a class="item" href="../talk/">Talk</a>
-	</div>
+    <!-- Sidebar Menu -->
+    <div class="ui vertical sidebar menu">
+        <a class="item" href="..">Home</a>
+        <a class="item" href="../blog/">Blog</a>
+        <a class="active item" href="#">Project</a>
+        <a class="item" href="../talk/">Talk</a>
+    </div>
 
-	<!-- Page Contents -->
-	<div class="pusher">
-		<div class="ui vertical masthead center aligned segment" style="border-bottom: none;">
-			<div class="ui container">
-				<div class="ui large secondary pointing menu">
-					<a class="toc item">
-						<i class="sidebar icon"></i>
-					</a>
-					<a class="item" href="..">Home</a>
-					<a class="item" href="../blog/">Blog</a>
-					<a class="active item" href="#">Project</a>
-					<a class="item" href="../talk/">Talk</a>
-				</div>
-			</div>
-		</div>
+    <!-- Page Contents -->
+    <div class="pusher">
+        <div class="ui vertical masthead center aligned segment" style="border-bottom: none;">
+            <div class="ui container">
+                <div class="ui large secondary pointing menu">
+                    <a class="toc item">
+                        <i class="sidebar icon"></i>
+                    </a>
+                    <a class="item" href="..">Home</a>
+                    <a class="item" href="../blog/">Blog</a>
+                    <a class="active item" href="#">Project</a>
+                    <a class="item" href="../talk/">Talk</a>
+                </div>
+            </div>
+        </div>
 
-		<div class="ui vertical stripe segment">
-			<div class="ui middle aligned stackable grid container">
-				<div class="ui dividing right rail" style="min-height: 248px;">
-					<div class="ui sticky fixed" style="right: 0px !important; width: 283px !important; height: 248px !important; margin-top: 30px;">
-						<h4 class="ui header"><a style="color: black;" href="#">Project</a></h4>
-						<div class="ui vertical following text menu" data-uk-scrollspy-nav="{closest: 'a', cls: 'active'}">
-							<a class="item" href="#myprojects">My Projects</a>
-							<a class="item" href="#organizations">Organiztions</a>
-							<a class="item" href="#mygadgets">My Gadgets</a>
-							<a class="item" href="#dedicatedprojects">Dedicated Projects</a>
-						</div>
-					</div>
-				</div>
-				<h2 class="ui center aligned icon header" id="myprojects">
-					<i class="circular github icon"></i>
-					<div class="content">My Projects</div>
-				</h2>
-				<div class="row">
-					<div class="eight wide column">
-						<h3 class="ui header">
-							<i class="android icon"></i>
-							<div class="content">
-								EigenNote
-								<a hreflang="en-US" href="//github.com/chengscott/eigennote" target="_blank"><i class="code icon"></i></a>
-							</div>
-						</h3>
-						<p>An app to scan and categorize notes.</p>
-						<h3 class="ui header">
-							<i class="terminal icon"></i>
-							<div class="content">
-								mathsparrow
-								<a hreflang="en-US" href="//github.com/chengscott/mathsparrow" target="_blank"><i class="code icon"></i></a>
-							</div>
-						</h3>
-						<p>I2P Final Project - count listening majhong practice</p>
-						<h3 class="ui header">
-							<i class="android icon"></i>
-							<div class="content">
-								<a hreflang="zh-Hant" href="//pcshjq.github.io" target="_blank">府中小吃趣</a>
-								<a hreflang="zh-Hant" href="//play.google.com/store/apps/details?id=io.github.pcshjq" target="_blank"><i class="play icon"></i></a>
-							</div>
-						</h3>
-						<p>An app to search food near PCSH.</p>
-						<h3 class="ui header">
-							<i class="windows icon"></i>
-							<div class="content">Simulated Biomes</div>
-						</h3>
-						<p>A simlution of interactions between species.</p>
-						<h3 class="ui header">
-							<i class="windows icon"></i>
-							<div class="content">Go</div>
-						</h3>
-						<p>Play Go with friends.</p>
-						<h3 class="ui header">
-							<i class="windows icon"></i>
-							<div class="content">Email Sender</div>
-						</h3>
-						<p>A software to send email.</p>
-						<h3 class="ui header">
-							<i class="windows icon"></i>
-							<div class="content">Zinc</div>
-						</h3>
-						<p>Customized web browser with IE core.</p>
-					</div>
-				</div>
-				<h2 class="ui center aligned icon header" id="organizations">
-					<i class="circular users icon"></i>
-					<div class="content">Organizations</div>
-				</h2>
-				<div class="row">
-					<div class="eight wide column">
-						<h3 class="ui header">
-							<i class="linux icon"></i>
-							<div class="content">
-								<a hreflang="en-US" href="//140.114.86.238" target="_blank">NTHUOJ</a>
-								<a hreflang="en-US" href="//github.com/bruce3557/NTHUOJ_web" target="_blank"><i class="code icon"></i></a>
-								<a hreflang="en-US" href="//github.com/bruce3557/NTHUOJ_backend" target="_blank"><i class="code icon"></i></a>
-							</div>
-						</h3>
-						<p>National Tsing Hua University Online Judge, an ACM-like online judge designed for training purposes and a platform of contest.</p>
-						<h3 class="ui header">
-							<i class="linux icon"></i>
-							<div class="content">NTHUSA</div>
-						</h3>
-						<p>National Tsing Hua University Student Agency provides an information platform, which gathers all kinds of recent activities and news.</p>
-						<h3 class="ui header">
-							<i class="linux icon"></i>
-							<div class="content">
-								<a hreflang="en-US" href="//pcshic.github.io" target="_blank">PCSHIC</a>
-								<a hreflang="en-US" href="//github.com/pcshic" target="_blank"><i class="code icon"></i></a>
-							</div>
-						</h3>
-						<p>Panchiao Senior High School Information Club</p>
-						<h3 class="ui header">
-							<i class="terminal icon"></i>
-							<div class="content">
-								<a hreflang="en-US" href="//ray-optics.github.io" target="_blank">ray-optics</a>
-								<a hreflang="en-US" href="//chrome.google.com/webstore/detail/ray-optics-simulation/egamlemiidmmmcccadndbjjihkcfiobh?hl=en" target="_blank"><i class="play icon"></i></a>
-								<a hreflang="en-US" href="//github.com/ray-optics" target="_blank"><i class="code icon"></i></a>
-							</div>
-						</h3>
-						<p>Simulate reflection and refraction of light.</p>
-					</div>
-				</div>
-				<h2 class="ui center aligned icon header" id="mygadgets">
-					<i class="circular github alternate icon"></i>
-					<div class="content">My Gadgets</div>
-				</h2>
-				<div class="row">
-					<div class="eight wide column">
-						<h3 class="ui header">
-							<i class="terminal icon"></i>
-							<div class="content">
-								lolibalgo
-								<a hreflang="en-US" href="//github.com/chengscott/lolibalgo" target="_blank"><i class="code icon"></i></a>
-							</div>
-						</h3>
-						<p>Some algorithm templates in C++.</p>
-						<h3 class="ui header">
-							<i class="terminal icon"></i>
-							<div class="content">
-								Parse.js-Blog
-								<a hreflang="en-US" href="//github.com/chengscott/Parse.js-Blog" target="_blank"><i class="code icon"></i></a>
-							</div>
-						</h3>
-						<p>A simple blog prototype made with Parse.</p>
-						<h3 class="ui header">
-							<i class="terminal icon"></i>
-							<div class="content">
-								WIFI
-								<a hreflang="en-US" href="//github.com/chengscott/WIFI" target="_blank"><i class="code icon"></i></a>
-							</div>
-						</h3>
-						<p>A simple toolkit to setup dormitary wifi.</p>
-						<h3 class="ui header">
-							<i class="windows icon"></i>
-							<div class="content">Calendar</div>
-						</h3>
-						<p>A calendar with yahoo weather, notes and alarm clock.</p>
-					</div>
-				</div>
-				<h2 class="ui center aligned icon header" id="dedicatedprojects">
-					<i class="circular fork icon"></i>
-					<div class="content">Dedicated Projects</div>
-				</h2>
-				<div class="row">
-					<div class="eight wide column">
-						<h3 class="ui header">
-							<i class="terminal icon"></i>
-							<div class="content">
-								<a hreflang="zh-Hant" href="//www.tedxnthu.com/" target="_blank">TEDxNTHU</a>
-								<a hreflang="en-US" href="//github.com/chengscott/tedxnthu.github.io" target="_blank"><i class="code icon"></i></a>
-							</div>
-						</h3>
-						<p>2016 TEDxNTHU core official wetbsite.</p>
-						<h3 class="ui header">
-							<i class="android icon"></i>
-							<div class="content">
-								GHCWidget
-								<a hreflang="en-US" href="//play.google.com/store/apps/details?id=by.aleks.ghcwidget" target="_blank"><i class="play icon"></i></a>
-								<a hreflang="en-US" href="//github.com/chengscott/GHCWidget" target="_blank"><i class="code icon"></i></a>
-							</div>
-						</h3>
-						<p>This simple widget shows your contribution activity over a chosen amount of time. It has a few different color themes to better fit your homescreen style.</p>
-						<h3 class="ui header">
-							<i class="terminal icon"></i>
-							<div class="content">ishiwu</div>
-						</h3>
-						<p>An easy platform to find ishiwu.</p>
-						<h3 class="ui header">
-							<i class="android icon"></i>
-							<div class="content">
-								<a hreflang="en-US" href="//developer.android.com/training/volley" target="_blank">volley</a>
-								<a hreflang="en-US" href="//github.com/chengscott/volley" target="_blank"><i class="code icon"></i></a>
-								<a hreflang="en-US" href="//gist.github.com/chengscott/042564ce24952e8f626a" target="_blank"><i class="code icon"></i></a>
-							</div>
-						</h3>
-						<p>Google volley library.</p>
-					</div>
-				</div>
-			</div>
-		</div>
+        <div class="ui vertical stripe segment">
+            <div class="ui middle aligned stackable grid container">
+                <div class="ui dividing right rail" style="min-height: 248px;">
+                    <div class="ui sticky fixed" style="right: 0px !important; width: 283px !important; height: 248px !important; margin-top: 30px;">
+                        <h4 class="ui header"><a style="color: black;" href="#">Project</a></h4>
+                        <div class="ui vertical following text menu" data-uk-scrollspy-nav="{closest: 'a', cls: 'active'}">
+                            <a class="item" href="#myprojects">My Projects</a>
+                            <a class="item" href="#organizations">Organiztions</a>
+                            <a class="item" href="#mygadgets">My Gadgets</a>
+                            <a class="item" href="#dedicatedprojects">Dedicated Projects</a>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="ui center aligned icon header" id="myprojects">
+                    <i class="circular github icon"></i>
+                    <div class="content">My Projects</div>
+                </h2>
+                <div class="row">
+                    <div class="eight wide column">
+                        <h3 class="ui header">
+                            <i class="android icon"></i>
+                            <div class="content">
+                                EigenNote
+                                <a hreflang="en-US" href="//github.com/chengscott/eigennote" target="_blank"><i class="code icon"></i></a>
+                            </div>
+                        </h3>
+                        <p>An app to scan and categorize notes.</p>
+                        <h3 class="ui header">
+                            <i class="terminal icon"></i>
+                            <div class="content">
+                                mathsparrow
+                                <a hreflang="en-US" href="//github.com/chengscott/mathsparrow" target="_blank"><i class="code icon"></i></a>
+                            </div>
+                        </h3>
+                        <p>I2P Final Project - count listening majhong practice</p>
+                        <h3 class="ui header">
+                            <i class="android icon"></i>
+                            <div class="content">
+                                <a hreflang="zh-Hant" href="//pcshjq.github.io" target="_blank">府中小吃趣</a>
+                                <a hreflang="zh-Hant" href="//play.google.com/store/apps/details?id=io.github.pcshjq" target="_blank"><i class="play icon"></i></a>
+                            </div>
+                        </h3>
+                        <p>An app to search food near PCSH.</p>
+                        <h3 class="ui header">
+                            <i class="windows icon"></i>
+                            <div class="content">Simulated Biomes</div>
+                        </h3>
+                        <p>A simlution of interactions between species.</p>
+                        <h3 class="ui header">
+                            <i class="windows icon"></i>
+                            <div class="content">Go</div>
+                        </h3>
+                        <p>Play Go with friends.</p>
+                        <h3 class="ui header">
+                            <i class="windows icon"></i>
+                            <div class="content">Email Sender</div>
+                        </h3>
+                        <p>A software to send email.</p>
+                        <h3 class="ui header">
+                            <i class="windows icon"></i>
+                            <div class="content">Zinc</div>
+                        </h3>
+                        <p>Customized web browser with IE core.</p>
+                    </div>
+                </div>
+                <h2 class="ui center aligned icon header" id="organizations">
+                    <i class="circular users icon"></i>
+                    <div class="content">Organizations</div>
+                </h2>
+                <div class="row">
+                    <div class="eight wide column">
+                        <h3 class="ui header">
+                            <i class="linux icon"></i>
+                            <div class="content">
+                                <a hreflang="en-US" href="//140.114.86.238" target="_blank">NTHUOJ</a>
+                                <a hreflang="en-US" href="//github.com/bruce3557/NTHUOJ_web" target="_blank"><i class="code icon"></i></a>
+                                <a hreflang="en-US" href="//github.com/bruce3557/NTHUOJ_backend" target="_blank"><i class="code icon"></i></a>
+                            </div>
+                        </h3>
+                        <p>National Tsing Hua University Online Judge, an ACM-like online judge designed for training purposes and a platform of contest.</p>
+                        <h3 class="ui header">
+                            <i class="linux icon"></i>
+                            <div class="content">NTHUSA</div>
+                        </h3>
+                        <p>National Tsing Hua University Student Agency provides an information platform, which gathers all kinds of recent activities and news.</p>
+                        <h3 class="ui header">
+                            <i class="linux icon"></i>
+                            <div class="content">
+                                <a hreflang="en-US" href="//pcshic.github.io" target="_blank">PCSHIC</a>
+                                <a hreflang="en-US" href="//github.com/pcshic" target="_blank"><i class="code icon"></i></a>
+                            </div>
+                        </h3>
+                        <p>Panchiao Senior High School Information Club</p>
+                        <h3 class="ui header">
+                            <i class="terminal icon"></i>
+                            <div class="content">
+                                <a hreflang="en-US" href="//ray-optics.github.io" target="_blank">ray-optics</a>
+                                <a hreflang="en-US" href="//chrome.google.com/webstore/detail/ray-optics-simulation/egamlemiidmmmcccadndbjjihkcfiobh?hl=en" target="_blank"><i class="play icon"></i></a>
+                                <a hreflang="en-US" href="//github.com/ray-optics" target="_blank"><i class="code icon"></i></a>
+                            </div>
+                        </h3>
+                        <p>Simulate reflection and refraction of light.</p>
+                    </div>
+                </div>
+                <h2 class="ui center aligned icon header" id="mygadgets">
+                    <i class="circular github alternate icon"></i>
+                    <div class="content">My Gadgets</div>
+                </h2>
+                <div class="row">
+                    <div class="eight wide column">
+                        <h3 class="ui header">
+                            <i class="terminal icon"></i>
+                            <div class="content">
+                                lolibalgo
+                                <a hreflang="en-US" href="//github.com/chengscott/lolibalgo" target="_blank"><i class="code icon"></i></a>
+                            </div>
+                        </h3>
+                        <p>Some algorithm templates in C++.</p>
+                        <h3 class="ui header">
+                            <i class="terminal icon"></i>
+                            <div class="content">
+                                Parse.js-Blog
+                                <a hreflang="en-US" href="//github.com/chengscott/Parse.js-Blog" target="_blank"><i class="code icon"></i></a>
+                            </div>
+                        </h3>
+                        <p>A simple blog prototype made with Parse.</p>
+                        <h3 class="ui header">
+                            <i class="terminal icon"></i>
+                            <div class="content">
+                                WIFI
+                                <a hreflang="en-US" href="//github.com/chengscott/WIFI" target="_blank"><i class="code icon"></i></a>
+                            </div>
+                        </h3>
+                        <p>A simple toolkit to setup dormitary wifi.</p>
+                        <h3 class="ui header">
+                            <i class="windows icon"></i>
+                            <div class="content">Calendar</div>
+                        </h3>
+                        <p>A calendar with yahoo weather, notes and alarm clock.</p>
+                    </div>
+                </div>
+                <h2 class="ui center aligned icon header" id="dedicatedprojects">
+                    <i class="circular fork icon"></i>
+                    <div class="content">Dedicated Projects</div>
+                </h2>
+                <div class="row">
+                    <div class="eight wide column">
+                        <h3 class="ui header">
+                            <i class="terminal icon"></i>
+                            <div class="content">
+                                <a hreflang="zh-Hant" href="//www.tedxnthu.com/" target="_blank">TEDxNTHU</a>
+                                <a hreflang="en-US" href="//github.com/chengscott/tedxnthu.github.io" target="_blank"><i class="code icon"></i></a>
+                            </div>
+                        </h3>
+                        <p>2016 TEDxNTHU core official wetbsite.</p>
+                        <h3 class="ui header">
+                            <i class="android icon"></i>
+                            <div class="content">
+                                GHCWidget
+                                <a hreflang="en-US" href="//play.google.com/store/apps/details?id=by.aleks.ghcwidget" target="_blank"><i class="play icon"></i></a>
+                                <a hreflang="en-US" href="//github.com/chengscott/GHCWidget" target="_blank"><i class="code icon"></i></a>
+                            </div>
+                        </h3>
+                        <p>This simple widget shows your contribution activity over a chosen amount of time. It has a few different color themes to better fit your homescreen style.</p>
+                        <h3 class="ui header">
+                            <i class="terminal icon"></i>
+                            <div class="content">ishiwu</div>
+                        </h3>
+                        <p>An easy platform to find ishiwu.</p>
+                        <h3 class="ui header">
+                            <i class="android icon"></i>
+                            <div class="content">
+                                <a hreflang="en-US" href="//developer.android.com/training/volley" target="_blank">volley</a>
+                                <a hreflang="en-US" href="//github.com/chengscott/volley" target="_blank"><i class="code icon"></i></a>
+                                <a hreflang="en-US" href="//gist.github.com/chengscott/042564ce24952e8f626a" target="_blank"><i class="code icon"></i></a>
+                            </div>
+                        </h3>
+                        <p>Google volley library.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-		<div class="ui inverted vertical footer segment">
-			<div class="ui container">
-				<div class="ui stackable inverted divided equal height stackable grid">
-					<div class="three wide column">
-						<h4 class="ui inverted header">About me</h4>
-						<div class="ui inverted link list">
-							<a hreflang="zh-Hant" href="//www.facebook.com/chengcos" target="_blank" class="item">My Facebook</a>
-							<a hreflang="en-US" href="//github.com/chengscott" target="_blank" class="item">My Github</a>
-							<a hreflang="zh-Hant" href="//codestreams.blogspot.tw/" target="_blank" class="item">Codestreams</a>
-						</div>
-					</div>
-					<div class="three wide column">
-						<h4 class="ui inverted header">Organizations</h4>
-						<div class="ui inverted link list">
-							<a hreflang="zh-Hant" href="//www.facebook.com/nthusa/" target="_blank" class="item">NTHUSA</a>
-							<a hreflang="zh-Hant" href="//pcshjq.github.io/" target="_blank" class="item">PCSHJQ</a>
-							<a hreflang="en-US" href="//github.com/pcshic" target="_blank" class="item">PCSHIC</a>
-						</div>
-					</div>
-					<div class="seven wide column">
-						<h4 class="ui inverted header">Site</h4>
-						<div class="ui inverted link list">
-							<a href="#" class="item">Sitemap</a>
-							<a hreflang="en-US" href="//goo.gl/forms/ASUOHJ8l8a" target="_blank" class="item">Error Report</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="ui inverted vertical footer segment">
+            <div class="ui container">
+                <div class="ui stackable inverted divided equal height stackable grid">
+                    <div class="three wide column">
+                        <h4 class="ui inverted header">About me</h4>
+                        <div class="ui inverted link list">
+                            <a hreflang="zh-Hant" href="//www.facebook.com/chengcos" target="_blank" class="item">My Facebook</a>
+                            <a hreflang="en-US" href="//github.com/chengscott" target="_blank" class="item">My Github</a>
+                            <a hreflang="zh-Hant" href="//codestreams.blogspot.tw/" target="_blank" class="item">Codestreams</a>
+                        </div>
+                    </div>
+                    <div class="three wide column">
+                        <h4 class="ui inverted header">Organizations</h4>
+                        <div class="ui inverted link list">
+                            <a hreflang="zh-Hant" href="//www.facebook.com/nthusa/" target="_blank" class="item">NTHUSA</a>
+                            <a hreflang="zh-Hant" href="//pcshjq.github.io/" target="_blank" class="item">PCSHJQ</a>
+                            <a hreflang="en-US" href="//github.com/pcshic" target="_blank" class="item">PCSHIC</a>
+                        </div>
+                    </div>
+                    <div class="seven wide column">
+                        <h4 class="ui inverted header">Site</h4>
+                        <div class="ui inverted link list">
+                            <a href="#" class="item">Sitemap</a>
+                            <a hreflang="en-US" href="//goo.gl/forms/ASUOHJ8l8a" target="_blank" class="item">Error Report</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

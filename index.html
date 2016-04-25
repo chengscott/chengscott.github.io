@@ -1,284 +1,284 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-	<meta name="google-site-verification" content="f3txyGzdHNConuCa-eu0H_UCAZ80WlfuvDoE1XDuZJM" />
-	<meta name="description" content="鄭余玄的個人網頁 - 部落格、專案、演講" />
-	<meta name="theme-color" content="#1976d2">
-	<meta name="msapplication-TileColor" content="#1976d2">
-	<meta name="msapplication-TileImage" content="img/icon/ms-icon-144x144.png">
-	<title lang="zh-Hant">鄭余玄 - chengscott</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="google-site-verification" content="f3txyGzdHNConuCa-eu0H_UCAZ80WlfuvDoE1XDuZJM" />
+    <meta name="description" content="鄭余玄的個人網頁 - 部落格、專案、演講" />
+    <meta name="theme-color" content="#1976d2">
+    <meta name="msapplication-TileColor" content="#1976d2">
+    <meta name="msapplication-TileImage" content="img/icon/ms-icon-144x144.png">
+    <title lang="zh-Hant">鄭余玄 - chengscott</title>
 
-	<link rel="icon" type="image/png" sizes="192x192"  href="img/icon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="img/icon/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
-	<link rel="manifest" href="img/icon/manifest.json">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
+    <link rel="manifest" href="img/icon/manifest.json">
     <link rel="stylesheet" href="//oss.maxcdn.com/semantic-ui/2.1.8/semantic.min.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="//oss.maxcdn.com/semantic-ui/2.1.8/semantic.min.js"></script>
-	<script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <script src="//oss.maxcdn.com/semantic-ui/2.1.8/semantic.min.js"></script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	ga('create', 'UA-73021613-1', 'auto');
-	ga('send', 'pageview');
+    ga('create', 'UA-73021613-1', 'auto');
+    ga('send', 'pageview');
   
-	$(function() {
-		$('.masthead').visibility({
-			once: false,
-			onBottomPassed: function() {
-				$('.fixed.menu').transition('fade in');
-			},
-			onBottomPassedReverse: function() {
-				$('.fixed.menu').transition('fade out');
-			}
-		});
+    $(function() {
+        $('.masthead').visibility({
+            once: false,
+            onBottomPassed: function() {
+                $('.fixed.menu').transition('fade in');
+            },
+            onBottomPassedReverse: function() {
+                $('.fixed.menu').transition('fade out');
+            }
+        });
         // create sidebar and attach to menu open
         $('.ui.sidebar').sidebar('attach events', '.toc.item');
         // about buttons
         $('#facebook').click(function() {
-        	window.open("//www.facebook.com/chengcos", "_blank");
-        	dataLayer.push({'fbLink': 'fbClick'});
+            window.open('//www.facebook.com/chengcos', '_blank');
+            dataLayer.push({'fbLink': 'fbClick'});
         });
         $('#github').click(function() {
-        	window.open("//github.com/chengscott", "_blank");
-        	dataLayer.push({'githubLink': 'githubClick'});
+            window.open('//github.com/chengscott', '_blank');
+            dataLayer.push({'githubLink': 'githubClick'});
         });
     });
     </script>
-	<style>
-		.hidden.menu {
-			display: none;
-		}
-		.masthead.segment {
-			min-height: 700px;
-			padding: 1em 0em;
-		}
-		.masthead .logo.item img {
-			margin-right: 1em;
-		}
-		.masthead h1.ui.header {
-			margin-top: 3em;
-			margin-bottom: 0em;
-			font-size: 4em;
-			font-weight: normal;
-		}
-		.masthead h2 {
-			font-size: 1.7em;
-			font-weight: normal;
-		}
-		.ui.vertical.stripe {
-			padding: 8em 0em;
-		}
-		.ui.vertical.stripe h3 {
-			font-size: 2em;
-		}
-		.ui.vertical.stripe .button + h3,
-		.ui.vertical.stripe p + h3 {
-			margin-top: 3em;
-		}
-		.ui.vertical.stripe p {
-			font-size: 1.33em;
-		}
-		.ui.vertical.stripe .horizontal.divider {
-			margin: 3em 0em;
-		}
-		.quote.stripe.segment {
-			padding: 0em;
-		}
-		.quote.stripe.segment .grid .column {
-			padding-top: 5em;
-			padding-bottom: 5em;
-		}
-		.footer.segment {
-			padding: 5em 0em;
-		}
-		.secondary.pointing.menu .toc.item {
-			display: none;
-		}
-		@media only screen and (max-width: 700px) {
-			.ui.fixed.menu {
-				display: none !important;
-			}
-			.secondary.pointing.menu .item,
-			.secondary.pointing.menu .menu {
-				display: none;
-			}
-			.secondary.pointing.menu .toc.item {
-				display: block;
-			}
-			.masthead.segment {
-				min-height: 350px;
-			}
-			.masthead h1.ui.header {
-				font-size: 2em;
-				margin-top: 1.5em;
-			}
-			.masthead h2 {
-				margin-top: 0.5em;
-				font-size: 1.5em;
-			}
-		}
+    <style>
+        .hidden.menu {
+            display: none;
+        }
+        .masthead.segment {
+            min-height: 700px;
+            padding: 1em 0em;
+        }
+        .masthead .logo.item img {
+            margin-right: 1em;
+        }
+        .masthead h1.ui.header {
+            margin-top: 3em;
+            margin-bottom: 0em;
+            font-size: 4em;
+            font-weight: normal;
+        }
+        .masthead h2 {
+            font-size: 1.7em;
+            font-weight: normal;
+        }
+        .ui.vertical.stripe {
+            padding: 8em 0em;
+        }
+        .ui.vertical.stripe h3 {
+            font-size: 2em;
+        }
+        .ui.vertical.stripe .button + h3,
+        .ui.vertical.stripe p + h3 {
+            margin-top: 3em;
+        }
+        .ui.vertical.stripe p {
+            font-size: 1.33em;
+        }
+        .ui.vertical.stripe .horizontal.divider {
+            margin: 3em 0em;
+        }
+        .quote.stripe.segment {
+            padding: 0em;
+        }
+        .quote.stripe.segment .grid .column {
+            padding-top: 5em;
+            padding-bottom: 5em;
+        }
+        .footer.segment {
+            padding: 5em 0em;
+        }
+        .secondary.pointing.menu .toc.item {
+            display: none;
+        }
+        @media only screen and (max-width: 700px) {
+            .ui.fixed.menu {
+                display: none !important;
+            }
+            .secondary.pointing.menu .item,
+            .secondary.pointing.menu .menu {
+                display: none;
+            }
+            .secondary.pointing.menu .toc.item {
+                display: block;
+            }
+            .masthead.segment {
+                min-height: 350px;
+            }
+            .masthead h1.ui.header {
+                font-size: 2em;
+                margin-top: 1.5em;
+            }
+            .masthead h2 {
+                margin-top: 0.5em;
+                font-size: 1.5em;
+            }
+        }
     </style>
 </head>
 <body>
-	<!-- Following Menu -->
-	<div class="ui large top fixed hidden menu">
-		<div class="ui container">
-			<a class="active item" href="#">Home</a>
-			<a class="item" href="blog/">Blog</a>
-			<a class="item" href="project/">Project</a>
-			<a class="item" href="talk/">Talk</a>
-		</div>
-	</div>
+    <!-- Following Menu -->
+    <div class="ui large top fixed hidden menu">
+        <div class="ui container">
+            <a class="active item" href="#">Home</a>
+            <a class="item" href="blog/">Blog</a>
+            <a class="item" href="project/">Project</a>
+            <a class="item" href="talk/">Talk</a>
+        </div>
+    </div>
 
-	<!-- Sidebar Menu -->
-	<div class="ui vertical sidebar menu">
-		<a class="active item" href="#">Home</a>
-		<a class="item" href="blog/">Blog</a>
-		<a class="item" href="project/">Project</a>
-		<a class="item" href="talk/">Talk</a>
-	</div>
+    <!-- Sidebar Menu -->
+    <div class="ui vertical sidebar menu">
+        <a class="active item" href="#">Home</a>
+        <a class="item" href="blog/">Blog</a>
+        <a class="item" href="project/">Project</a>
+        <a class="item" href="talk/">Talk</a>
+    </div>
 
-	<!-- Page Contents -->
-	<div class="pusher">
-		<div class="ui inverted vertical masthead center aligned segment" style="background: url(img/cover.jpg) no-repeat center;">
+    <!-- Page Contents -->
+    <div class="pusher">
+        <div class="ui inverted vertical masthead center aligned segment" style="background: url(img/cover.jpg) no-repeat center;">
 
-			<div class="ui container">
-				<div class="ui large secondary pointing menu">
-					<a class="toc item">
-						<i class="sidebar icon"></i>
-					</a>
-					<a class="active item" href="#">Home</a>
-					<a class="item" href="blog/">Blog</a>
-					<a class="item" href="project/">Project</a>
-					<a class="item" href="talk/">Talk</a>
-				</div>
-			</div>
+            <div class="ui container">
+                <div class="ui large secondary pointing menu">
+                    <a class="toc item">
+                        <i class="sidebar icon"></i>
+                    </a>
+                    <a class="active item" href="#">Home</a>
+                    <a class="item" href="blog/">Blog</a>
+                    <a class="item" href="project/">Project</a>
+                    <a class="item" href="talk/">Talk</a>
+                </div>
+            </div>
 
-			<div class="ui text container">
-				<h1 class="ui inverted header">
-					<img class="ui small circular bordered image" src="img/face.jpg">
-					<div lang="zh-Hant" class="content">鄭余玄 Home</div>
-				</h1>
-				<h2>About chengscott</h2>
-				<div class="ui animated fade huge facebook button" id="facebook">
-			        <div class="visible content"><i class="facebook icon"></i>Facebook</div>
-			        <div lang="zh-Hant" class="hidden content"><i class="facebook icon"></i>鄭余玄</div>
-			    </div>
-				<div class="ui animated fade huge github button" id="github">
-			        <div class="visible content"><i class="github icon"></i>Github</div>
-			        <div class="hidden content"><i class="github icon"></i>chengscott</div>
-			    </div>
-			</div>
-		</div>
+            <div class="ui text container">
+                <h1 class="ui inverted header">
+                    <img class="ui small circular bordered image" src="img/face.jpg">
+                    <div lang="zh-Hant" class="content">鄭余玄 Home</div>
+                </h1>
+                <h2>About chengscott</h2>
+                <div class="ui animated fade huge facebook button" id="facebook">
+                    <div class="visible content"><i class="facebook icon"></i>Facebook</div>
+                    <div lang="zh-Hant" class="hidden content"><i class="facebook icon"></i>鄭余玄</div>
+                </div>
+                <div class="ui animated fade huge github button" id="github">
+                    <div class="visible content"><i class="github icon"></i>Github</div>
+                    <div class="hidden content"><i class="github icon"></i>chengscott</div>
+                </div>
+            </div>
+        </div>
 
-		<div class="ui vertical stripe segment">
-			<div class="ui middle aligned stackable grid container">
-				<div class="row">
-					<div class="eight wide column">
-						<h3 class="ui header">
-							<i class="code icon"></i>
-							<div class="content">A brief background</div>
-						</h3>
-						<p>Programming is the thing that I'd like to stick to for day in, day out, not just for a week, but for years. I have passion in coding and perserverance for debugging. I always work really hard to make that future a reality.</p>
-						<h3 class="ui header">
-							<i class="student icon"></i>
-							<div class="content">Academic background</div>
-						</h3>
-						<p>
-							<table class="ui single line table">
-								<tbody>
-									<tr>
-										<td>2015 -</td>
-										<td><a hreflang="zh-Hant" href="//www.math.nthu.edu.tw/" target="_blank">Department of Mathematics</a>, <a hreflang="zh-Hant" href="//www.nthu.edu.tw/" target="_blank">National Tsing Hua University</a></td>
-									</tr>
-									<tr>
-										<td>2012 - 2015</td>
-										<td><a hreflang="zh-Hant" href="//www.pcsh.ntpc.edu.tw/" target="_blank">Panchiao Senior High School</a></td>
-									</tr>
-								</tbody>
-							</table>
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
+        <div class="ui vertical stripe segment">
+            <div class="ui middle aligned stackable grid container">
+                <div class="row">
+                    <div class="eight wide column">
+                        <h3 class="ui header">
+                            <i class="code icon"></i>
+                            <div class="content">A brief background</div>
+                        </h3>
+                        <p>Programming is the thing that I'd like to stick to for day in, day out, not just for a week, but for years. I have passion in coding and perserverance for debugging. I always work really hard to make that future a reality.</p>
+                        <h3 class="ui header">
+                            <i class="student icon"></i>
+                            <div class="content">Academic background</div>
+                        </h3>
+                        <p>
+                            <table class="ui single line table">
+                                <tbody>
+                                    <tr>
+                                        <td>2015 -</td>
+                                        <td><a hreflang="zh-Hant" href="//www.math.nthu.edu.tw/" target="_blank">Department of Mathematics</a>, <a hreflang="zh-Hant" href="//www.nthu.edu.tw/" target="_blank">National Tsing Hua University</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2012 - 2015</td>
+                                        <td><a hreflang="zh-Hant" href="//www.pcsh.ntpc.edu.tw/" target="_blank">Panchiao Senior High School</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-		<div class="ui vertical stripe quote segment">
-			<div class="ui equal width stackable internally celled grid">
-				<div class="center aligned row">
-					<div lang="zh-Hant" class="teal column">
-						<h3><i class="left quote icon"></i>沒有挫折的熱情沒有價值</h3>
-						<p>─江振誠</p>
-					</div>
-					<div class="olive column">
-						<h3><i class="left quote icon"></i>I can accept failure, everyone fails at something.<br>But I can't accept not trying.</h3>
-						<p>─Michael Jeffrey Jordan</p>
-					</div>
-				</div>
-			</div>
-		</div>
+        <div class="ui vertical stripe quote segment">
+            <div class="ui equal width stackable internally celled grid">
+                <div class="center aligned row">
+                    <div lang="zh-Hant" class="teal column">
+                        <h3><i class="left quote icon"></i>沒有挫折的熱情沒有價值</h3>
+                        <p>─江振誠</p>
+                    </div>
+                    <div class="olive column">
+                        <h3><i class="left quote icon"></i>I can accept failure, everyone fails at something.<br>But I can't accept not trying.</h3>
+                        <p>─Michael Jeffrey Jordan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-		<div class="ui vertical stripe segment">
-			<div class="ui text container">
-				<h4 class="ui horizontal header divider">News</h4>
-				<h3 lang="zh-Hant" class="ui header">Android 強大網路流 - Google Volley 介紹</h3>
-				<p lang="zh-Hant">
-					4/24 at Hsinchu Tech Chat Group @ NTHU
-					<br><a hreflang="zh-Hant" href="talk/?t=Google_Volley_Intro">Talk 網址</a> <a hreflang="zh-Hant" href="https://goo.gl/H3QYDy" target="_blank">Facebook 活動網址</a>
-				</p>
-				<h3 lang="zh-Hant" class="ui header">Android 讀書會</h3>
-				<p lang="zh-Hant">
-					3/27, 4/17 晚上6:00~9:00 Java 程式設計
-					<br>5/8, 5/15, 5/22, 5/29 晚上6:00~9:00 Android 手機程式設計
-					<br><a hreflang="zh-Hant" href="//nthuion.github.io">課程網址</a>
-				</p>
-				<h3 lang="zh-Hant" class="ui header">歡樂寒假營</h3>
-				<p lang="zh-Hant">
-					2/1, 2/2 上午9:00~12:00 Java 程式設計
-					<br>2/3, 2/4, 2/5 下午1:00~5:30 Android 手機程式設計
-					<br><a hreflang="zh-Hant" href="//goo.gl/forms/dYvggaKYzH" target="_blank">報名網址</a> <a hreflang="zh-Hant" href="talk/?t=Android_and_Java">課程網址</a>
-					<br>這五天亂入資訊社歡樂寒假營的講者，都是「府中小吃趣」的作者喔!!
-					<br>報名之後，請記得到課程網址，下載課程相關檔案。
-				</p>
-			</div>
-		</div>
+        <div class="ui vertical stripe segment">
+            <div class="ui text container">
+                <h4 class="ui horizontal header divider">News</h4>
+                <h3 lang="zh-Hant" class="ui header">Android 強大網路流 - Google Volley 介紹</h3>
+                <p lang="zh-Hant">
+                    4/24 at Hsinchu Tech Chat Group @ NTHU
+                    <br><a hreflang="zh-Hant" href="talk/?t=Google_Volley_Intro">Talk 網址</a> <a hreflang="zh-Hant" href="https://goo.gl/H3QYDy" target="_blank">Facebook 活動網址</a>
+                </p>
+                <h3 lang="zh-Hant" class="ui header">Android 讀書會</h3>
+                <p lang="zh-Hant">
+                    3/27, 4/17 晚上6:00~9:00 Java 程式設計
+                    <br>5/8, 5/15, 5/22, 5/29 晚上6:00~9:00 Android 手機程式設計
+                    <br><a hreflang="zh-Hant" href="//nthuion.github.io">課程網址</a>
+                </p>
+                <h3 lang="zh-Hant" class="ui header">歡樂寒假營</h3>
+                <p lang="zh-Hant">
+                    2/1, 2/2 上午9:00~12:00 Java 程式設計
+                    <br>2/3, 2/4, 2/5 下午1:00~5:30 Android 手機程式設計
+                    <br><a hreflang="zh-Hant" href="//goo.gl/forms/dYvggaKYzH" target="_blank">報名網址</a> <a hreflang="zh-Hant" href="talk/?t=Android_and_Java">課程網址</a>
+                    <br>這五天亂入資訊社歡樂寒假營的講者，都是「府中小吃趣」的作者喔!!
+                    <br>報名之後，請記得到課程網址，下載課程相關檔案。
+                </p>
+            </div>
+        </div>
 
-		<div class="ui inverted vertical footer segment">
-			<div class="ui container">
-				<div class="ui stackable inverted divided equal height stackable grid">
-					<div class="three wide column">
-						<h4 class="ui inverted header">About me</h4>
-						<div class="ui inverted link list">
-							<a hreflang="zh-Hant" href="//www.facebook.com/chengcos" target="_blank" class="item">My Facebook</a>
-							<a hreflang="en-US" href="//github.com/chengscott" target="_blank" class="item">My Github</a>
-							<a hreflang="zh-Hant" href="//codestreams.blogspot.tw/" target="_blank" class="item">Codestreams</a>
-						</div>
-					</div>
-					<div class="three wide column">
-						<h4 class="ui inverted header">Organizations</h4>
-						<div class="ui inverted link list">
-							<a hreflang="zh-Hant" href="//www.facebook.com/nthusa/" target="_blank" class="item">NTHUSA</a>
-							<a hreflang="zh-Hant" href="//pcshjq.github.io/" target="_blank" class="item">PCSHJQ</a>
-							<a hreflang="en-US" href="//github.com/pcshic" target="_blank" class="item">PCSHIC</a>
-						</div>
-					</div>
-					<div class="seven wide column">
-						<h4 class="ui inverted header">Site</h4>
-						<div class="ui inverted link list">
-							<a href="#" class="item">Sitemap</a>
-							<a hreflang="en-US" href="//goo.gl/forms/ASUOHJ8l8a" target="_blank" class="item">Error Report</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="ui inverted vertical footer segment">
+            <div class="ui container">
+                <div class="ui stackable inverted divided equal height stackable grid">
+                    <div class="three wide column">
+                        <h4 class="ui inverted header">About me</h4>
+                        <div class="ui inverted link list">
+                            <a hreflang="zh-Hant" href="//www.facebook.com/chengcos" target="_blank" class="item">My Facebook</a>
+                            <a hreflang="en-US" href="//github.com/chengscott" target="_blank" class="item">My Github</a>
+                            <a hreflang="zh-Hant" href="//codestreams.blogspot.tw/" target="_blank" class="item">Codestreams</a>
+                        </div>
+                    </div>
+                    <div class="three wide column">
+                        <h4 class="ui inverted header">Organizations</h4>
+                        <div class="ui inverted link list">
+                            <a hreflang="zh-Hant" href="//www.facebook.com/nthusa/" target="_blank" class="item">NTHUSA</a>
+                            <a hreflang="zh-Hant" href="//pcshjq.github.io/" target="_blank" class="item">PCSHJQ</a>
+                            <a hreflang="en-US" href="//github.com/pcshic" target="_blank" class="item">PCSHIC</a>
+                        </div>
+                    </div>
+                    <div class="seven wide column">
+                        <h4 class="ui inverted header">Site</h4>
+                        <div class="ui inverted link list">
+                            <a href="#" class="item">Sitemap</a>
+                            <a hreflang="en-US" href="//goo.gl/forms/ASUOHJ8l8a" target="_blank" class="item">Error Report</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

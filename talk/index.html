@@ -1,211 +1,212 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-	<meta name="google-site-verification" content="f3txyGzdHNConuCa-eu0H_UCAZ80WlfuvDoE1XDuZJM" />
-	<meta name="description" content="鄭余玄的演講" />
-	<meta name="theme-color" content="#1976d2">
-	<meta name="msapplication-TileColor" content="#1976d2">
-	<meta name="msapplication-TileImage" content="../img/icon/ms-icon-144x144.png">
-	<title>Talk</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="google-site-verification" content="f3txyGzdHNConuCa-eu0H_UCAZ80WlfuvDoE1XDuZJM" />
+    <meta name="description" content="鄭余玄的演講" />
+    <meta name="theme-color" content="#1976d2">
+    <meta name="msapplication-TileColor" content="#1976d2">
+    <meta name="msapplication-TileImage" content="../img/icon/ms-icon-144x144.png">
+    <title>Talk</title>
 
-	<link rel="icon" type="image/png" sizes="192x192"  href="../img/icon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="../img/icon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="../img/icon/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="../img/icon/favicon-16x16.png">
-	<link rel="manifest" href="../img/icon/manifest.json">
-	<link rel="stylesheet" href="//oss.maxcdn.com/semantic-ui/2.1.8/semantic.min.css">
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="//oss.maxcdn.com/semantic-ui/2.1.8/semantic.min.js"></script>
-	<script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <link rel="icon" type="image/png" sizes="192x192"  href="../img/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../img/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/icon/favicon-16x16.png">
+    <link rel="manifest" href="../img/icon/manifest.json">
+    <link rel="stylesheet" href="//oss.maxcdn.com/semantic-ui/2.1.8/semantic.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//oss.maxcdn.com/semantic-ui/2.1.8/semantic.min.js"></script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	ga('create', 'UA-73021613-1', 'auto');
-	ga('send', 'pageview');
-	
-	function getParameterByName(name) {
-	    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-	    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-	        results = regex.exec(location.search);
-	    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-	}
+    ga('create', 'UA-73021613-1', 'auto');
+    ga('send', 'pageview');
+    
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)'),
+            results = regex.exec(location.search);
+        return results === null ? '' :
+            decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
 
-	$(function() {
-		$('.masthead').visibility({
-			once: false,
-			onBottomPassed: function() {
-				$('.fixed.menu').transition('fade in');
-			},
-			onBottomPassedReverse: function() {
-				$('.fixed.menu').transition('fade out');
-			}
+    $(function() {
+        $('.masthead').visibility({
+            once: false,
+            onBottomPassed: function() {
+                $('.fixed.menu').transition('fade in');
+            },
+            onBottomPassedReverse: function() {
+                $('.fixed.menu').transition('fade out');
+            }
 
-		});
+        });
         // create sidebar and attach to menu open
         $('.ui.sidebar').sidebar('attach events', '.toc.item');
         // talk
         var t = 'page/' + getParameterByName('t') + '/index.html';
         if (t == 'page//index.html') t = 'talk.html';
-	    $('#talk').load(t, function(responseText, statusText, xhr) {
-	    	if (statusText == 'error') {
-	    		$('#talk').load('error.html');
-	    	}
-	    });
+        $('#talk').load(t, function(responseText, statusText, xhr) {
+            if (statusText == 'error') {
+                $('#talk').load('error.html');
+            }
+        });
     });
-	</script>
-	<style>
-		.hidden.menu {
-			display: none;
-		}
-		.masthead.segment {
-			min-height: 70px;
-			padding: 1em 0em;
-		}
-		.masthead .logo.item img {
-			margin-right: 1em;
-		}
-		.masthead h1.ui.header {
-			margin-top: 3em;
-			margin-bottom: 0em;
-			font-size: 4em;
-			font-weight: normal;
-		}
-		.masthead h2 {
-			font-size: 1.7em;
-			font-weight: normal;
-		}
-		.ui.vertical.stripe {
-			padding: 4em 0em;
-		}
-		.ui.vertical.stripe h3 {
-			font-size: 2em;
-		}
-		.ui.vertical.stripe .button + h3,
-		.ui.vertical.stripe p + h3 {
-			margin-top: 1em;
-		}
-		.ui.vertical.stripe p {
-			font-size: 1.33em;
-		}
-		.ui.vertical.stripe .horizontal.divider {
-			margin: 3em 0em;
-		}
-		.quote.stripe.segment {
-			padding: 0em;
-		}
-		.quote.stripe.segment .grid .column {
-			padding-top: 5em;
-			padding-bottom: 5em;
-		}
-		.footer.segment {
-			padding: 5em 0em;
-		}
-		.secondary.pointing.menu .toc.item {
-			display: none;
-		}
-		@media screen and (min-width: 770px) {
-			.ui.footer {
-				position: absolute;
-				bottom: 0;
-				width: 100%;
-			}
-		}
-		@media only screen and (max-width: 700px) {
-			.ui.fixed.menu {
-				display: none !important;
-			}
-			.secondary.pointing.menu .item,
-			.secondary.pointing.menu .menu {
-				display: none;
-			}
-			.secondary.pointing.menu .toc.item {
-				display: block;
-			}
-			.masthead.segment {
-				min-height: 35px;
-			}
-			.masthead h1.ui.header {
-				font-size: 2em;
-				margin-top: 1.5em;
-			}
-			.masthead h2 {
-				margin-top: 0.5em;
-				font-size: 1.5em;
-			}
-		}
-	</style>
+    </script>
+    <style>
+        .hidden.menu {
+            display: none;
+        }
+        .masthead.segment {
+            min-height: 70px;
+            padding: 1em 0em;
+        }
+        .masthead .logo.item img {
+            margin-right: 1em;
+        }
+        .masthead h1.ui.header {
+            margin-top: 3em;
+            margin-bottom: 0em;
+            font-size: 4em;
+            font-weight: normal;
+        }
+        .masthead h2 {
+            font-size: 1.7em;
+            font-weight: normal;
+        }
+        .ui.vertical.stripe {
+            padding: 4em 0em;
+        }
+        .ui.vertical.stripe h3 {
+            font-size: 2em;
+        }
+        .ui.vertical.stripe .button + h3,
+        .ui.vertical.stripe p + h3 {
+            margin-top: 1em;
+        }
+        .ui.vertical.stripe p {
+            font-size: 1.33em;
+        }
+        .ui.vertical.stripe .horizontal.divider {
+            margin: 3em 0em;
+        }
+        .quote.stripe.segment {
+            padding: 0em;
+        }
+        .quote.stripe.segment .grid .column {
+            padding-top: 5em;
+            padding-bottom: 5em;
+        }
+        .footer.segment {
+            padding: 5em 0em;
+        }
+        .secondary.pointing.menu .toc.item {
+            display: none;
+        }
+        @media screen and (min-width: 770px) {
+            .ui.footer {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+            }
+        }
+        @media only screen and (max-width: 700px) {
+            .ui.fixed.menu {
+                display: none !important;
+            }
+            .secondary.pointing.menu .item,
+            .secondary.pointing.menu .menu {
+                display: none;
+            }
+            .secondary.pointing.menu .toc.item {
+                display: block;
+            }
+            .masthead.segment {
+                min-height: 35px;
+            }
+            .masthead h1.ui.header {
+                font-size: 2em;
+                margin-top: 1.5em;
+            }
+            .masthead h2 {
+                margin-top: 0.5em;
+                font-size: 1.5em;
+            }
+        }
+    </style>
 </head>
-<body>	
-	<!-- Following Menu -->
-	<div class="ui large top fixed hidden menu">
-		<div class="ui container">
-			<a class="item" href="..">Home</a>
-			<a class="item" href="../blog/">Blog</a>
-			<a class="item" href="../project/">Project</a>
-			<a class="active item" href="../talk/">Talk</a>
-		</div>
-	</div>
+<body>    
+    <!-- Following Menu -->
+    <div class="ui large top fixed hidden menu">
+        <div class="ui container">
+            <a class="item" href="..">Home</a>
+            <a class="item" href="../blog/">Blog</a>
+            <a class="item" href="../project/">Project</a>
+            <a class="active item" href="../talk/">Talk</a>
+        </div>
+    </div>
 
-	<!-- Sidebar Menu -->
-	<div class="ui vertical sidebar menu">
-		<a class="item" href="..">Home</a>
-		<a class="item" href="../blog/">Blog</a>
-		<a class="item" href="../project/">Project</a>
-		<a class="active item" href="../talk/">Talk</a>
-	</div>
+    <!-- Sidebar Menu -->
+    <div class="ui vertical sidebar menu">
+        <a class="item" href="..">Home</a>
+        <a class="item" href="../blog/">Blog</a>
+        <a class="item" href="../project/">Project</a>
+        <a class="active item" href="../talk/">Talk</a>
+    </div>
 
-	<!-- Page Contents -->
-	<div class="pusher">
-		<div class="ui vertical masthead center aligned segment" style="border-bottom: none;">
-			<div class="ui container">
-				<div class="ui large secondary pointing menu">
-					<a class="toc item">
-						<i class="sidebar icon"></i>
-					</a>
-					<a class="item" href="..">Home</a>
-					<a class="item" href="../blog/">Blog</a>
-					<a class="item" href="../project/">Project</a>
-					<a class="active item" href="../talk/">Talk</a>
-				</div>
-			</div>
-		</div>
+    <!-- Page Contents -->
+    <div class="pusher">
+        <div class="ui vertical masthead center aligned segment" style="border-bottom: none;">
+            <div class="ui container">
+                <div class="ui large secondary pointing menu">
+                    <a class="toc item">
+                        <i class="sidebar icon"></i>
+                    </a>
+                    <a class="item" href="..">Home</a>
+                    <a class="item" href="../blog/">Blog</a>
+                    <a class="item" href="../project/">Project</a>
+                    <a class="active item" href="../talk/">Talk</a>
+                </div>
+            </div>
+        </div>
 
-		<div class="ui vertical stripe segment" id="talk" style="padding-bottom: 230px; border-bottom: none;"></div>
+        <div class="ui vertical stripe segment" id="talk" style="padding-bottom: 230px; border-bottom: none;"></div>
 
-		<div class="ui inverted vertical footer segment">
-			<div class="ui container">
-				<div class="ui stackable inverted divided equal height stackable grid">
-					<div class="three wide column">
-						<h4 class="ui inverted header">About me</h4>
-						<div class="ui inverted link list">
-							<a hreflang="zh-Hant" href="//www.facebook.com/chengcos" target="_blank" class="item">My Facebook</a>
-							<a hreflang="en-US" href="//github.com/chengscott" target="_blank" class="item">My Github</a>
-							<a hreflang="zh-Hant" href="//codestreams.blogspot.tw/" target="_blank" class="item">Codestreams</a>
-						</div>
-					</div>
-					<div class="three wide column">
-						<h4 class="ui inverted header">Organizations</h4>
-						<div class="ui inverted link list">
-							<a hreflang="zh-Hant" href="//www.facebook.com/nthusa/" target="_blank" class="item">NTHUSA</a>
-							<a hreflang="zh-Hant" href="//pcshjq.github.io/" target="_blank" class="item">PCSHJQ</a>
-							<a hreflang="en-US" href="//github.com/pcshic" target="_blank" class="item">PCSHIC</a>
-						</div>
-					</div>
-					<div class="seven wide column">
-						<h4 class="ui inverted header">Site</h4>
-						<div class="ui inverted link list">
-							<a href="#" class="item">Sitemap</a>
-							<a hreflang="en-US" href="//goo.gl/forms/ASUOHJ8l8a" target="_blank" class="item">Error Report</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="ui inverted vertical footer segment">
+            <div class="ui container">
+                <div class="ui stackable inverted divided equal height stackable grid">
+                    <div class="three wide column">
+                        <h4 class="ui inverted header">About me</h4>
+                        <div class="ui inverted link list">
+                            <a hreflang="zh-Hant" href="//www.facebook.com/chengcos" target="_blank" class="item">My Facebook</a>
+                            <a hreflang="en-US" href="//github.com/chengscott" target="_blank" class="item">My Github</a>
+                            <a hreflang="zh-Hant" href="//codestreams.blogspot.tw/" target="_blank" class="item">Codestreams</a>
+                        </div>
+                    </div>
+                    <div class="three wide column">
+                        <h4 class="ui inverted header">Organizations</h4>
+                        <div class="ui inverted link list">
+                            <a hreflang="zh-Hant" href="//www.facebook.com/nthusa/" target="_blank" class="item">NTHUSA</a>
+                            <a hreflang="zh-Hant" href="//pcshjq.github.io/" target="_blank" class="item">PCSHJQ</a>
+                            <a hreflang="en-US" href="//github.com/pcshic" target="_blank" class="item">PCSHIC</a>
+                        </div>
+                    </div>
+                    <div class="seven wide column">
+                        <h4 class="ui inverted header">Site</h4>
+                        <div class="ui inverted link list">
+                            <a href="#" class="item">Sitemap</a>
+                            <a hreflang="en-US" href="//goo.gl/forms/ASUOHJ8l8a" target="_blank" class="item">Error Report</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
