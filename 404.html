@@ -40,6 +40,15 @@
         });
         // create sidebar and attach to menu open
         $('.ui.sidebar').sidebar('attach events', '.toc.item');
+        // animation
+        $('#404').transition('bounce');
+        $('#404').mouseover(function() {
+            $(this).transition('bounce');
+        });
+        $('#not_found').transition('tada');
+        $('#not_found').mouseover(function() {
+            $(this).transition('tada');
+        })
     });
     </script>
     <style>
@@ -161,9 +170,9 @@
 
             <div class="ui text container">
                 <h1 class="ui inverted header">
-                    <div lang="zh-Hant" class="content">404</div>
+                    <div lang="zh-Hant" class="content" id="404">404</div>
                 </h1>
-                <h2>Not Found</h2>
+                <h2 id="not_found">Not Found</h2>
             </div>
         </div>
 
