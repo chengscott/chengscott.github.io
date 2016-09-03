@@ -1,29 +1,16 @@
+<script src="js/template.js"></script>
 <script src="js/pdf.js"></script>
 <script>
-	var docids = {
-		'Ch1': '0B-XnGimZpoDreVNvS3VMbWRsWVE',
-		'Ch1 Problem Plus': '0B-XnGimZpoDrQ2hxS0tqaXB2TE0',
-		'Ch2 Problem Plus': '0B-XnGimZpoDrbTlzbFZkM2pYa2s',
-		'Ch3': '0B-XnGimZpoDrYzU2X3hWSmRuWnc'
-	};
+var docids = {
+    'Ch1': '0B-XnGimZpoDreVNvS3VMbWRsWVE',
+    'Ch1 Problem Plus': '0B-XnGimZpoDrQ2hxS0tqaXB2TE0',
+    'Ch2 Problem Plus': '0B-XnGimZpoDrbTlzbFZkM2pYa2s',
+    'Ch3': '0B-XnGimZpoDrYzU2X3hWSmRuWnc'
+}, title = 'Calculus Stewart Ch1 ~ Ch3';
 
-	$(function() {
-		$('#pdftabs .item').on('click', function(e) {
-			$('#pdftabs .item').removeClass('active');
-			$(this).addClass('active');
-			loadPDF(docids[$(this).text()]);
-		})
-		loadPDF(docids[$('#pdftabs .active').text()]);
-	});
+$(function() {
+    add_title_tabs('#content', title, Object.keys(docids));
+});
 </script>
 
-<div class="ui text container">
-	<h3 class="ui header">Calculus Stewart Ch1 ~ Ch3</h3>
-	<div class="ui top stackable attached tabular menu" id="pdftabs">
-		<a class="item active">Ch1</a>
-		<a class="item">Ch1 Problem Plus</a>
-		<a class="item">Ch2 Problem Plus</a>
-		<a class="item">Ch3</a>
-	</div>
-	<iframe id="pdf" width="100%" height="800" style="border: none;"></iframe>
-</div>
+<div class="ui text container" id="content"></div>

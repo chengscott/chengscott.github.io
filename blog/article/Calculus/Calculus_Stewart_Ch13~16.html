@@ -1,27 +1,15 @@
+<script src="js/template.js"></script>
 <script src="js/pdf.js"></script>
 <script>
-	var docids = {
-		'Ch14 Problem Plus': '0B-XnGimZpoDrc0RENDJXSmxoems',
-		'Ch15 Problem Plus': '0B-XnGimZpoDrUEw5emI1a1dtVnc',
-		'Ch16 Problem Plus': '0B-XnGimZpoDrRHhrY2FrR0NJbmc'
-	};
+var docids = {
+    'Ch14 Problem Plus': '0B-XnGimZpoDrc0RENDJXSmxoems',
+    'Ch15 Problem Plus': '0B-XnGimZpoDrUEw5emI1a1dtVnc',
+    'Ch16 Problem Plus': '0B-XnGimZpoDrRHhrY2FrR0NJbmc'
+}, title = 'Calculus Stewart Ch13 ~ Ch16';
 
-	$(function() {
-		$('#pdftabs .item').on('click', function(e) {
-			$('#pdftabs .item').removeClass('active');
-			$(this).addClass('active');
-			loadPDF(docids[$(this).text()]);
-		})
-		loadPDF(docids[$('#pdftabs .active').text()]);
-	});
+$(function() {
+    add_title_tabs('#content', title, Object.keys(docids));
+});
 </script>
 
-<div class="ui text container">
-	<h3 class="ui header">Calculus Stewart Ch13 ~ Ch16</h3>
-	<div class="ui top stackable attached tabular menu" id="pdftabs">
-		<a class="item active">Ch14 Problem Plus</a>
-		<a class="item">Ch15 Problem Plus</a>
-		<a class="item">Ch16 Problem Plus</a>
-	</div>
-	<iframe id="pdf" width="100%" height="800" style="border: none;"></iframe>
-</div>
+<div class="ui text container" id="content"></div>

@@ -1,15 +1,13 @@
+<script src="js/template.js"></script>
 <script src="js/pdf.js"></script>
 <script>
-	$(function() {
-		loadPDF('0B-XnGimZpoDrSHQ1MmZGMmE2VVU');
-	});
+$(function() {
+    var title = 'Calculus (I) Final Examination',
+        subtitle = 'January 8, 2016',
+        docid = '0B-XnGimZpoDrSHQ1MmZGMmE2VVU';
+    add_title_sub('#content', title, subtitle, docid);
+});
 </script>
 
-<div class="ui text container">
-	<h3 class="ui header">
-		<div class="content">Calculus (I) Final Examination
-			<div class="sub header">January 8, 2016</div>
-		</div>
-	</h3>
-	<iframe id="pdf" width="100%" height="800" style="border: none;"></iframe>
-</div>
+<div class="ui text container" id="content"></div>
+
