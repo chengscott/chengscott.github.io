@@ -30,35 +30,6 @@
     ga('create', 'UA-73021613-1', 'auto');
     ga('send', 'pageview');
 
-    function list(url, path, parent) {
-        $.getJSON(url, function(data) {
-            data = data.tree;
-            $.each(data, function(index, datum) {
-                var nextId = parent + '-' + datum.path;
-                if (datum.type == 'tree') {
-                    var res = '<div class="item">' +
-                    '<i class="folder icon"></i>' +
-                    '<div class="content">' +
-                    '<div class="header">' + datum.path + '</div>' +
-                    '<div class="ui list" id="' + nextId + '"></div>' +
-                    '</div></div>';
-                    $('#' + parent).html($('#' + parent).html() + res);
-                    list(datum.url, path + '/' + datum.path, nextId);
-                } else {
-                    var name = datum.path.slice(0, datum.path.lastIndexOf('.'));
-                    var res = '<div class="item">' +
-                    '<i class="file icon"></i>' +
-                    '<div class="content">' +
-                    '<div class="header">' +
-                    '<a href="?p=' + path + '/' + name + '">' +
-                    name + '</a></div>' +
-                    '</div></div>';
-                    $('#' + parent).html($('#' + parent).html() + res);
-                }
-            });
-        });
-    }
-
     function getParameterByName(name) {
         name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
         var regex = new RegExp('[\\?&]' + name + '=([^&#]*)'),
@@ -80,38 +51,13 @@
         });
         // create sidebar and attach to menu open
         $('.ui.sidebar').sidebar('attach events', '.toc.item');
-        // article
+        // blog
         var p = getParameterByName('p');
         if (p == '') p = 'blog';
-        $('#article').load(p + '.html', function(responseText, statusText, xhr) {
+        $('#blog').load(p + '.html', function(responseText, statusText, xhr) {
             if (statusText == 'error') {
-                $('#article').load('error.html');
+                $('#blog').load('error.html');
             }
-        });
-        // folder
-        var apiUrl = 'https://api.github.com/repos/chengscott/chengscott.github.io';
-        $.getJSON(apiUrl + '/git/refs/heads/master', function(ret) {
-            $.getJSON(apiUrl + '/git/trees/' + ret.object.sha, function(ret) {
-                var blogUrl;
-                ret = ret.tree;
-                $.each(ret, function(index, data) {
-                    if (data.path == 'blog') {
-                        blogUrl = data.url;
-                        return;
-                    }
-                });
-                $.getJSON(blogUrl, function(ret) {
-                    var articleUrl;
-                    ret = ret.tree;
-                    $.each(ret, function(index, data) {
-                        if (data.path == 'article') {
-                            articleUrl = data.url;
-                            return;
-                        }
-                    });
-                    list(articleUrl, 'article', 'folderTree');
-                });
-            });
         });
     });
     </script>
@@ -232,14 +178,9 @@
             </div>
         </div>
         
-        <div class="ui vertical stripe segment" style="padding-bottom: 230px;">
-            <div class="ui stackable grid">
-                <div class="four column"></div>
-                <div class="four wide column"><br><div class="ui list" id="folderTree"></div></div>
-                <div class="four wide column">
-                    <div class="ui text container" id="article"></div>
-                </div>
-            </div>
+        <div class="ui vertical stripe segment" style="padding-bottom: 230px; border-bottom: none;">
+            <div class="ui middle aligned stackable grid container" id="blog"></div>
+            <br><br><br><br><br>
         </div>
         
         <div class="ui inverted vertical footer segment">
