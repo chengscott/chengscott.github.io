@@ -2,25 +2,13 @@
 <html lang="en-US">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Refresh" content="0;url=./">
     <meta name="google-site-verification" content="f3txyGzdHNConuCa-eu0H_UCAZ80WlfuvDoE1XDuZJM">
     <meta name="description" content="鄭余玄的個人網頁 - 部落格、專案、演講">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#1976d2">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="msapplication-TileColor" content="#1976d2">
-    <meta name="msapplication-TileImage" content="img/icon/ms-icon-144x144.png">
-    <title lang="zh-Hant">鄭余玄 - chengscott</title>
-
-    <link href="img/icon/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
-    <link href="img/icon/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
-    <link href="img/icon/favicon-96x96.png" rel="icon" type="image/png" sizes="96x96">
-    <link href="img/icon/android-icon-192x192.png" rel="icon" type="image/png" sizes="192x192">
-    <link href="img/icon/manifest.json" rel="manifest">
-    <link href="http://oss.maxcdn.com/semantic-ui/2.2.4/semantic.min.css" rel="stylesheet">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="http://oss.maxcdn.com/semantic-ui/2.2.4/semantic.min.js"></script>
+    <title lang="en-US">鄭余玄 | chengscott</title>
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -29,184 +17,8 @@
 
     ga('create', 'UA-73021613-1', 'auto');
     ga('send', 'pageview');
-  
-    $(function() {
-        $('.masthead').visibility({
-            once: false,
-            onBottomPassed: function() {
-                $('.fixed.menu').transition('fade in');
-            },
-            onBottomPassedReverse: function() {
-                $('.fixed.menu').transition('fade out');
-            }
-        });
-        // create sidebar and attach to menu open
-        $('.ui.sidebar').sidebar('attach events', '.toc.item');
-        // animation
-        $('#404').transition('bounce');
-        $('#404').mouseover(function() {
-            $(this).transition('bounce');
-        });
-        $('#not_found').transition('tada');
-        $('#not_found').mouseover(function() {
-            $(this).transition('tada');
-        })
-    });
     </script>
-    <style>
-        .hidden.menu {
-            display: none;
-        }
-        .masthead.segment {
-            min-height: 700px;
-            padding: 1em 0em;
-        }
-        .masthead .logo.item img {
-            margin-right: 1em;
-        }
-        .masthead h1.ui.header {
-            margin-top: 3em;
-            margin-bottom: 0em;
-            font-size: 4em;
-            font-weight: normal;
-        }
-        .masthead h2 {
-            font-size: 1.7em;
-            font-weight: normal;
-        }
-        .ui.vertical.stripe {
-            padding: 8em 0em;
-        }
-        .ui.vertical.stripe h3 {
-            font-size: 2em;
-        }
-        .ui.vertical.stripe .button + h3,
-        .ui.vertical.stripe p + h3 {
-            margin-top: 3em;
-        }
-        .ui.vertical.stripe p {
-            font-size: 1.33em;
-        }
-        .ui.vertical.stripe .horizontal.divider {
-            margin: 3em 0em;
-        }
-        .quote.stripe.segment {
-            padding: 0em;
-        }
-        .quote.stripe.segment .grid .column {
-            padding-top: 5em;
-            padding-bottom: 5em;
-        }
-        .footer.segment {
-            padding: 5em 0em;
-        }
-        .secondary.pointing.menu .toc.item {
-            display: none;
-        }
-        @media screen and (min-width: 770px) {
-            .ui.footer {
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-            }
-        }
-        @media only screen and (max-width: 700px) {
-            .ui.fixed.menu {
-                display: none !important;
-            }
-            .secondary.pointing.menu .item,
-            .secondary.pointing.menu .menu {
-                display: none;
-            }
-            .secondary.pointing.menu .toc.item {
-                display: block;
-            }
-            .masthead.segment {
-                min-height: 350px;
-            }
-            .masthead h1.ui.header {
-                font-size: 2em;
-                margin-top: 1.5em;
-            }
-            .masthead h2 {
-                margin-top: 0.5em;
-                font-size: 1.5em;
-            }
-        }
-    </style>
 </head>
-<body>
-    <!-- Following Menu -->
-    <div class="ui large top fixed hidden menu">
-        <div class="ui container">
-            <a href="index.html" class="active item">Home</a>
-            <a href="blog/" class="item">Blog</a>
-            <a href="project/" class="item">Project</a>
-            <a href="talk/" class="item">Talk</a>
-        </div>
-    </div>
-
-    <!-- Sidebar Menu -->
-    <div class="ui vertical sidebar menu">
-        <a href="index.html" class="active item">Home</a>
-        <a href="blog/" class="item">Blog</a>
-        <a href="project/" class="item">Project</a>
-        <a href="talk/" class="item">Talk</a>
-    </div>
-
-    <!-- Page Contents -->
-    <div class="pusher">
-        <div class="ui inverted vertical masthead center aligned segment" style="background: url(img/sea.jpg) no-repeat center;">
-
-            <div class="ui container">
-                <div class="ui large secondary pointing menu">
-                    <a class="toc item">
-                        <i class="sidebar icon"></i>
-                    </a>
-                    <a href="index.html" class="active item">Home</a>
-                    <a href="blog/" class="item">Blog</a>
-                    <a href="project/" class="item">Project</a>
-                    <a href="talk/" class="item">Talk</a>
-                </div>
-            </div>
-
-            <div class="ui text container">
-                <h1 class="ui inverted header">
-                    <div lang="zh-Hant" class="content" id="404">404</div>
-                </h1>
-                <h2 id="not_found">Not Found</h2>
-            </div>
-        </div>
-
-        <div class="ui inverted vertical footer segment">
-            <div class="ui container">
-                <div class="ui stackable inverted divided equal height stackable grid">
-                    <div class="three wide column">
-                        <h4 class="ui inverted header">About me</h4>
-                        <div class="ui inverted link list">
-                            <a href="//www.facebook.com/chengcos" hreflang="zh-Hant" target="_blank" class="item">My Facebook</a>
-                            <a href="//github.com/chengscott" hreflang="en-US" target="_blank" class="item">My Github</a>
-                            <a href="//codestreams.blogspot.tw/" hreflang="zh-Hant" target="_blank" class="item">Codestreams</a>
-                        </div>
-                    </div>
-                    <div class="three wide column">
-                        <h4 class="ui inverted header">Organizations</h4>
-                        <div class="ui inverted link list">
-                            <a href="//nthuion.cs.nthu.edu.tw/" hreflang="zh-Hant" target="_blank" class="item">NTHU ION</a>
-                            <a href="//acm.cs.nthu.edu.tw/" hreflang="zh-Hant" target="_blank" class="item">NTHUOJ</a>
-                            <a href="//pcshic.github.io/" hreflang="en-US" target="_blank" class="item">PCSHIC</a>
-                        </div>
-                    </div>
-                    <div class="seven wide column">
-                        <h4 class="ui inverted header">Site</h4>
-                        <div class="ui inverted link list">
-                            <a href="#" class="item">Sitemap</a>
-                            <a href="//goo.gl/forms/ASUOHJ8l8a" hreflang="en-US" target="_blank" class="item">Error Report</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
+<body></body>
 </html>
+

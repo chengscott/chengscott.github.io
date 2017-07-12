@@ -12,16 +12,4 @@
   <loc>http://chengscott.github.io/blog/</loc>
   <priority>0.80</priority>
 </url>
-<url>
-  <loc>http://chengscott.github.io/project/</loc>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://chengscott.github.io/talk/</loc>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://chengscott.github.io/talk/?t=Android_and_Java</loc>
-  <priority>0.80</priority>
-</url>
 </urlset>

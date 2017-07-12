@@ -9,15 +9,23 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#1976d2">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="msapplication-TileColor" content="#1976d2">
-    <meta name="msapplication-TileImage" content="img/icon/ms-icon-144x144.png">
     <title lang="en-US">Talk</title>
 
-    <link href="../img/icon/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
-    <link href="../img/icon/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
-    <link href="../img/icon/favicon-96x96.png" rel="icon" type="image/png" sizes="96x96">
-    <link href="../img/icon/android-icon-192x192.png" rel="icon" type="image/png" sizes="192x192">
-    <link href="../img/icon/manifest.json" rel="manifest">
+    <!-- Icon -->
+    <link href="../assets/ico/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+    <link href="../assets/ico/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+    <link href="../assets/ico/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="../assets/ico/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+    <link href="../assets/ico/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="../assets/ico/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+    <link href="../assets/ico/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+    <link href="../assets/ico/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+    <link href="../assets/ico/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="../assets/ico/android-icon-192x192.png" rel="icon" type="image/png" sizes="192x192">
+    <link href="../assets/ico/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="../assets/ico/favicon-96x96.png" rel="icon" type="image/png" sizes="96x96">
+    <link href="../assets/ico/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="../assets/ico/manifest.json" rel="manifest">
     <link href="http://oss.maxcdn.com/semantic-ui/2.2.4/semantic.min.css" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="http://oss.maxcdn.com/semantic-ui/2.2.4/semantic.min.js"></script>
@@ -53,10 +61,10 @@
         $('.ui.sidebar').sidebar('attach events', '.toc.item');
         // talk
         var t = 'page/' + getParameterByName('t') + '/index.html';
-        if (t == 'page//index.html') t = 'talk.html';
+        if (t == 'page//index.html') window.location.href = '../#talk';
         $('#talk').load(t, function(responseText, statusText, xhr) {
             if (statusText == 'error') {
-                $('#talk').load('error.html');
+                window.location.href = '../#talk';
             }
         });
     });
@@ -68,9 +76,6 @@
         .masthead.segment {
             min-height: 70px;
             padding: 1em 0em;
-        }
-        .masthead .logo.item img {
-            margin-right: 1em;
         }
         .masthead h1.ui.header {
             margin-top: 3em;
@@ -98,25 +103,8 @@
         .ui.vertical.stripe .horizontal.divider {
             margin: 3em 0em;
         }
-        .quote.stripe.segment {
-            padding: 0em;
-        }
-        .quote.stripe.segment .grid .column {
-            padding-top: 5em;
-            padding-bottom: 5em;
-        }
-        .footer.segment {
-            padding: 5em 0em;
-        }
         .secondary.pointing.menu .toc.item {
             display: none;
-        }
-        @media screen and (min-width: 770px) {
-            .ui.footer {
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-            }
         }
         @media only screen and (max-width: 700px) {
             .ui.fixed.menu {
@@ -149,8 +137,8 @@
         <div class="ui container">
             <a href=".." class="item">Home</a>
             <a href="../blog/" class="item">Blog</a>
-            <a href="../project/" class="item">Project</a>
-            <a href="../talk/" class="active item">Talk</a>
+            <a href="../#project" class="item">Project</a>
+            <a href="../#talk" class="active item">Talk</a>
         </div>
     </div>
 
@@ -158,8 +146,8 @@
     <div class="ui vertical sidebar menu">
         <a href=".." class="item">Home</a>
         <a href="../blog/" class="item">Blog</a>
-        <a href="../project/" class="item">Project</a>
-        <a href="../talk/" class="active item">Talk</a>
+        <a href="../#project" class="item">Project</a>
+        <a href="../#talk" class="active item">Talk</a>
     </div>
 
     <!-- Page Contents -->
@@ -172,46 +160,14 @@
                     </a>
                     <a href=".." class="item">Home</a>
                     <a href="../blog/" class="item">Blog</a>
-                    <a href="../project/" class="item">Project</a>
-                    <a href="../talk/" class="active item">Talk</a>
+                    <a href="../#project" class="item">Project</a>
+                    <a href="../#talk" class="active item">Talk</a>
                 </div>
             </div>
         </div>
 
         <div class="ui vertical stripe segment" style="padding-bottom: 230px; border-bottom: none;">
             <div class="ui middle aligned stackable grid container" id="talk"></div>
-            <br><br><br>
         </div>
-
-        <div class="ui inverted vertical footer segment">
-            <div class="ui container">
-                <div class="ui stackable inverted divided equal height stackable grid">
-                    <div class="three wide column">
-                        <h4 class="ui inverted header">About me</h4>
-                        <div class="ui inverted link list">
-                            <a href="//www.facebook.com/chengcos" hreflang="zh-Hant" target="_blank" class="item">My Facebook</a>
-                            <a href="//github.com/chengscott" hreflang="en-US" target="_blank" class="item">My Github</a>
-                            <a href="//codestreams.blogspot.tw/" hreflang="zh-Hant" target="_blank" class="item">Codestreams</a>
-                        </div>
-                    </div>
-                    <div class="three wide column">
-                        <h4 class="ui inverted header">Organizations</h4>
-                        <div class="ui inverted link list">
-                            <a href="//nthuion.cs.nthu.edu.tw/" hreflang="zh-Hant" target="_blank" class="item">NTHU ION</a>
-                            <a href="//acm.cs.nthu.edu.tw/" hreflang="zh-Hant" target="_blank" class="item">NTHUOJ</a>
-                            <a href="//pcshic.github.io/" hreflang="en-US" target="_blank" class="item">PCSHIC</a>
-                        </div>
-                    </div>
-                    <div class="seven wide column">
-                        <h4 class="ui inverted header">Site</h4>
-                        <div class="ui inverted link list">
-                            <a href="#" class="item">Sitemap</a>
-                            <a href="//goo.gl/forms/ASUOHJ8l8a" hreflang="en-US" target="_blank" class="item">Error Report</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </body>
 </html>

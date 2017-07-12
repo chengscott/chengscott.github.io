@@ -9,289 +9,503 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#1976d2">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="msapplication-TileColor" content="#1976d2">
-    <meta name="msapplication-TileImage" content="img/icon/ms-icon-144x144.png">
-    <title lang="zh-Hant">鄭余玄 - chengscott</title>
+    <title>鄭余玄 | chengscott</title>
 
-    <link href="img/icon/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
-    <link href="img/icon/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
-    <link href="img/icon/favicon-96x96.png" rel="icon" type="image/png" sizes="96x96">
-    <link href="img/icon/android-icon-192x192.png" rel="icon" type="image/png" sizes="192x192">
-    <link href="img/icon/manifest.json" rel="manifest">
-    <link href="http://oss.maxcdn.com/semantic-ui/2.2.4/semantic.min.css" rel="stylesheet">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="http://oss.maxcdn.com/semantic-ui/2.2.4/semantic.min.js"></script>
+    <!-- Icon -->
+    <link href="assets/ico/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+    <link href="assets/ico/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+    <link href="assets/ico/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="assets/ico/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+    <link href="assets/ico/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="assets/ico/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+    <link href="assets/ico/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+    <link href="assets/ico/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+    <link href="assets/ico/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="assets/ico/android-icon-192x192.png" rel="icon" type="image/png" sizes="192x192">
+    <link href="assets/ico/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="assets/ico/favicon-96x96.png" rel="icon" type="image/png" sizes="96x96">
+    <link href="assets/ico/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="assets/ico/manifest.json" rel="manifest">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <!-- Font -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet'>
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.scrollto/1.4.14/jquery.scrollTo.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.localscroll/1.4.0/jquery.localScroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.1.1/Chart.min.js"></script>
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-73021613-1', 'auto');
     ga('send', 'pageview');
-  
-    $(function() {
-        $('.masthead').visibility({
-            once: false,
-            onBottomPassed: function() {
-                $('.fixed.menu').transition('fade in');
-            },
-            onBottomPassedReverse: function() {
-                $('.fixed.menu').transition('fade out');
-            }
-        });
-        // create sidebar and attach to menu open
-        $('.ui.sidebar').sidebar('attach events', '.toc.item');
-        // about buttons
-        $('#facebook').click(function() {
-            window.open('//www.facebook.com/chengcos', '_blank');
-            dataLayer.push({'fbLink': 'fbClick'});
-        });
-        $('#github').click(function() {
-            window.open('//github.com/chengscott', '_blank');
-            dataLayer.push({'githubLink': 'githubClick'});
-        });
-        // animation
-        $('#code').mouseover(function() {
-            $(this).transition('jiggle');
-        });
-        $('#student').mouseover(function() {
-            $(this).transition('jiggle');
-        });
-        $('#left-quote').mouseover(function() {
-            $(this).transition('bounce');
-        });
-        $('#right-quote').mouseover(function() {
-            $(this).transition('bounce');
-        });
-    });
+
+    $(function() { $.localScroll({filter:'.smoothScroll'}) });
     </script>
-    <style>
-        .hidden.menu {
-            display: none;
-        }
-        .masthead.segment {
-            min-height: 700px;
-            padding: 1em 0em;
-        }
-        .masthead .logo.item img {
-            margin-right: 1em;
-        }
-        .masthead h1.ui.header {
-            margin-top: 3em;
-            margin-bottom: 0em;
-            font-size: 4em;
-            font-weight: normal;
-        }
-        .masthead h2 {
-            font-size: 1.7em;
-            font-weight: normal;
-        }
-        .ui.vertical.stripe {
-            padding: 8em 0em;
-        }
-        .ui.vertical.stripe h3 {
-            font-size: 2em;
-        }
-        .ui.vertical.stripe .button + h3,
-        .ui.vertical.stripe p + h3 {
-            margin-top: 3em;
-        }
-        .ui.vertical.stripe p {
-            font-size: 1.33em;
-        }
-        .ui.vertical.stripe .horizontal.divider {
-            margin: 3em 0em;
-        }
-        .quote.stripe.segment {
-            padding: 0em;
-        }
-        .quote.stripe.segment .grid .column {
-            padding-top: 5em;
-            padding-bottom: 5em;
-        }
-        .footer.segment {
-            padding: 5em 0em;
-        }
-        .secondary.pointing.menu .toc.item {
-            display: none;
-        }
-        @media only screen and (max-width: 700px) {
-            .ui.fixed.menu {
-                display: none !important;
-            }
-            .secondary.pointing.menu .item,
-            .secondary.pointing.menu .menu {
-                display: none;
-            }
-            .secondary.pointing.menu .toc.item {
-                display: block;
-            }
-            .masthead.segment {
-                min-height: 350px;
-            }
-            .masthead h1.ui.header {
-                font-size: 2em;
-                margin-top: 1.5em;
-            }
-            .masthead h2 {
-                margin-top: 0.5em;
-                font-size: 1.5em;
-            }
-        }
-    </style>
 </head>
-<body>
-    <!-- Following Menu -->
-    <div class="ui large top fixed hidden menu">
-        <div class="ui container">
-            <a href="#" class="active item">Home</a>
-            <a href="blog/" class="item">Blog</a>
-            <a href="project/" class="item">Project</a>
-            <a href="talk/" class="item">Talk</a>
-        </div>
-    </div>
 
-    <!-- Sidebar Menu -->
-    <div class="ui vertical sidebar menu">
-        <a href="#" class="active item">Home</a>
-        <a href="blog/" class="item">Blog</a>
-        <a href="project/" class="item">Project</a>
-        <a href="talk/" class="item">Talk</a>
-    </div>
-
-    <!-- Page Contents -->
-    <div class="pusher">
-        <div class="ui inverted vertical masthead center aligned segment" style="background: url(img/cover.jpg) no-repeat center;">
-
-            <div class="ui container">
-                <div class="ui large secondary pointing menu">
-                    <a class="toc item">
-                        <i class="sidebar icon"></i>
-                    </a>
-                    <a href="#" class="active item">Home</a>
-                    <a href="blog/" class="item">Blog</a>
-                    <a href="project/" class="item">Project</a>
-                    <a href="talk/" class="item">Talk</a>
-                </div>
-            </div>
-
-            <div class="ui text container">
-                <h1 class="ui inverted header">
-                    <img class="ui small circular bordered image" src="img/face.jpg">
-                    <div lang="zh-Hant" class="content">鄭余玄 Home</div>
-                </h1>
-                <h2>About chengscott</h2>
-                <div class="ui animated fade huge facebook button" id="facebook">
-                    <div class="visible content"><i class="facebook icon"></i>Facebook</div>
-                    <div lang="zh-Hant" class="hidden content"><i class="facebook icon"></i>鄭余玄</div>
-                </div>
-                <div class="ui animated fade huge github button" id="github">
-                    <div class="visible content"><i class="github icon"></i>Github</div>
-                    <div class="hidden content"><i class="github icon"></i>chengscott</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="ui vertical stripe segment">
-            <div class="ui middle aligned stackable grid container">
+<body data-spy="scroll" data-offset="0" data-target="#nav">
+    <!-- Top Section Bar -->
+    <div id="section-topbar">
+        <div id="topbar-inner">
+            <div class="container">
                 <div class="row">
-                    <div class="eight wide column">
-                        <h3 class="ui header">
-                            <i class="code icon" id="code"></i>
-                            <div class="content">A brief background</div>
-                        </h3>
-                        <p>Programming is the thing that I'd like to stick to for day in, day out, not just for a week, but for years. I have passion in coding and perserverance for debugging. I always work really hard to make that future a reality.</p>
-                        <h3 class="ui header">
-                            <i class="student icon" id="student"></i>
-                            <div class="content">Academic background</div>
-                        </h3>
-                        <p>
-                            <table class="ui single line table">
-                                <tbody>
-                                    <tr>
-                                        <td>2015 -</td>
-                                        <td>Major in <a href="//www.math.nthu.edu.tw/" hreflang="zh-Hant" target="_blank">Mathematics</a> and <a href="//web.cs.nthu.edu.tw/" hreflang="zh-Hant" target="_blank">Computer Science</a>, <a href="//www.nthu.edu.tw/" hreflang="zh-Hant" target="_blank">National Tsing Hua University</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>2012 - 2015</td>
-                                        <td><a href="//www.pcsh.ntpc.edu.tw/" hreflang="zh-Hant" target="_blank">Panchiao Senior High School</a></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </p>
+                    <div class="dropdown">
+                        <ul id="nav" class="nav">
+                            <li class="menu-item"><a class="smoothScroll" href="#about" title="About"><i class="fa fa-user"></i></a></li>
+                            <li class="menu-item"><a class="smoothScroll" href="#activity" title="Activity"><i class="fa fa-users"></i></a></li>
+                            <li class="menu-item"><a class="smoothScroll" href="#talk" title="Talk"><i class="fa fa-desktop"></i></a></li>
+                            <li class="menu-item"><a class="smoothScroll" href="#project" title="Project"><i class="fa fa-briefcase"></i></a></li>
+                        </ul>
                     </div>
+
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+    </div>
+    <!-- Header Section -->
+    <section id="header" name="header"></section>
+    <div id="headerwrap">
+        <div class="container">
+            <div class="row centered">
+                <div class="col-lg-12">
+                    <h1>鄭余玄</h1>
+                    <h3>Hacker | admin@chengscott.tw</h3>
                 </div>
             </div>
         </div>
+    </div>
+    <!-- About Section -->
+    <section id="about" name="about"></section>
+    <div id="intro">
+        <div class="container">
+            <div class="row">
 
-        <div class="ui vertical stripe quote segment">
-            <div class="ui equal width stackable internally celled grid">
-                <div class="center aligned row">
-                    <div lang="zh-Hant" class="teal column">
-                        <h3><i class="left quote icon" id="left-quote"></i>沒經過挫折的熱情沒有價值</h3>
-                        <p>─江振誠</p>
-                    </div>
-                    <div class="olive column">
-                        <h3><i class="left quote icon" id="right-quote"></i>Remember professionals built the Titanic <br>but an amateur built the Ark</h3>
-                        <p>─Father Brown</p>
-                    </div>
+                <div class="col-lg-2 col-lg-offset-1">
+                    <h5>ABOUT</h5>
                 </div>
+                <div class="col-lg-6">
+                    <p>
+                        Programming is the thing that I'd like to stick to for day in, day out, not just for a week, but for years.
+                        I always work really hard to make that future a reality.
+                    </p>
+                </div>
+                <div class="col-lg-3">
+                    <p>
+                        <a href="https://www.facebook.com/chengcos" target="_blank">
+                            <i class="fa fa-facebook"></i> Facebook
+                        </a><br>
+                        <a href="https://github.com/chengscott" target="_blank">
+                            <i class="fa fa-github"></i> GitHub
+                        </a><br>
+                        <a href="https://www.linkedin.com/in/chengscott" target="_blank">
+                            <i class="fa fa-linkedin"></i> LinkedIn
+                        </a>
+                    </p>
+                </div>
+
             </div>
         </div>
+    </div>
+    <!-- EDUCATION -->
+    <div class="container desc">
+        <div class="row">
 
-        <div class="ui vertical stripe segment">
-            <div class="ui text container">
-                <h4 class="ui horizontal header divider">News</h4>
-                <h3 lang="zh-Hant" class="ui header">資訊之芽培訓計畫</h3>
-                <p lang="zh-Hant">
-                    2017 at 國立清華大學
+            <div class="col-lg-2 col-lg-offset-1">
+                <h5>EDUCATION</h5>
+            </div>
+            <div class="col-lg-6">
+                <p><t>Major in Mathematics &amp; Computer Science</t><br>
+                    <a href="http://www.nthu.edu.tw/" target="_blank">
+                        National Tsing Hua University
+                    </a>
+                </p>
+            </div>
+            <div class="col-lg-3">
+                <p><sm>2015 -</sm><br>
+                    <imp><sm>IN PROGRESS</sm></imp>
+                </p>
+            </div>
+
+            <div class="col-lg-6 col-lg-offset-3">
+                <p><t>Panchiao Senior High School</t></p>
+            </div>
+            <div class="col-lg-3">
+                <p><sm>2012 - 2015</sm></p>
+            </div>
+
+        </div><br><hr>
+    </div>
+    <!-- ACTIVITY Section -->
+    <section id="activity" name="activity"></section>
+    <!-- ACTIVITY -->
+    <div class="container desc">
+        <div class="row">
+
+            <div class="col-lg-2 col-lg-offset-1">
+                <h5>ACTIVITY</h5>
+            </div>
+
+            <div class="col-lg-6">
+                <p><t>Cloud Architect</t><br>
+                    <a>
+                    </a><br>
+                </p>
+                <p><more>
+                </more></p>
+            </div>
+            <div class="col-lg-3">
+                <p><sm>MAR 2017 – PRESENT</sm></p>
+            </div>
+
+            <div class="col-lg-6 col-lg-offset-3">
+                <p><t>Lecturer</t><br>
+                    <a href="http://sprout.tw/spt/" target="_blank">
+                        資訊之芽培訓計畫 SPROUT
+                    </a><br>
+                </p>
+                <p><more>
+                    資訊之芽目前由臺大資訊系、清大資工系合力舉辦，
+                    目標是透過提供高中職生容易取得的程式設計、解題方法等資訊領域相關基礎課程，
+                    讓平常和資訊不熟的同學能有機會接觸資訊、喜歡資訊，甚至一圓心中的資訊夢！
+                </more></p>
+            </div>
+            <div class="col-lg-3">
+                <p><sm>MAR 2017 – PRESENT</sm></p>
+            </div>
+
+            <div class="col-lg-6 col-lg-offset-3">
+                <p><t>Organization Coordinator</t><br>
+                    <a href="http://goo.gl/mnPTMi" target="_blank">
+                        <i class="fa fa-medium"></i>
+                        清離子 NTHU ION
+                    </a><br>
+                </p>
+                <p><more>
+                    清離子黑客松希望能改變校園不滿的現狀。
+                    聚集校園中的各路好漢，也集合各種創意無限的好點子。
+                    運用大家所學的能力，動手解決清大校園中遇到的種種問題！
+                </more></p>
+            </div>
+            <div class="col-lg-3">
+                <p><sm>JUN 2016 – MAR 2017</sm></p>
+            </div>
+
+            <div class="col-lg-6 col-lg-offset-3">
+                <p><t>Container Backend Developer</t><br>
+                    <a href="http://acm.cs.nthu.edu.tw/" target="_blank">
+                        NTHUOJ
+                    </a><br>
+                </p>
+                <p><more>
+                    National Tsing Hua University Online Judge,
+                    an ACM-like online judge designed for training purposes and
+                    a platform of contest.
+                </more></p>
+            </div>
+            <div class="col-lg-3">
+                <p><sm>JAN 2016 – JUN 2016</sm></p>
+            </div>
+
+            <div class="col-lg-6 col-lg-offset-3">
+                <p><t>Web Backend Developer</t><br>
+                    <a href="https://www.facebook.com/nthusa/" target="_blank">
+                    	清華大學學生會 NTHUSA
+                    </a><br>
+                </p>
+                <p><more>
+                    NTHUSA provides an information platform,
+                    which gathers all kinds of recent activities and news.
+                </more></p>
+            </div>
+            <div class="col-lg-3">
+                <p><sm>JUL 2015 – JUL 2016</sm></p>
+            </div>
+
+            <div class="col-lg-6 col-lg-offset-3">
+                <p><t>Member</t><br>
+                    <a href="http://pcshic.github.io/" target="_blank">
+                    	板橋高中資訊社 PCSHIC
+                    </a><br>
+                </p>
+                <p><more>
+                    Panchiao Senior High School Information Club
+                </more></p>
+            </div>
+            <div class="col-lg-3">
+                <p><sm>MAR 2013</sm></p>
+            </div>
+
+        </div><br><hr>
+    </div>
+    <!-- TALK Section -->
+    <section id="talk" name="talk"></section>
+    <!-- TALK -->
+    <div class="container desc">
+        <div class="row">
+            <div class="col-lg-2 col-lg-offset-1">
+                <h5>TALK</h5>
+            </div>
+            <div class="col-lg-6">
+                <div class="imgbox">
+                    <img class="img-responsive" src="assets/img/git2.png" alt="Git 深入淺出">
+                    <div class="img-content">
+                        <a href="talk/?t=Head_First_Git" target="_blank" class="img-btn">
+                            READ MORE
+                        </a>
+                    </div>
+                </div>
+                <p></p>
+            </div>
+            <div class="col-lg-3">
+                <p>Git 深入淺出</p>
+                <p><more>
+                    除了基礎的 Git 操作外，想更了解 Git 的奧妙<del>邪惡</del>之處嗎？
+                    Git 深入淺出，將用淺顯易懂的教學，帶你深入探討 Git 的世界！
+                    聽完「Git 實戰與障礙排除」意猶未盡者、欲點滿 Git 技能者，
+                    誠心推薦您——Git 深入淺出。
+                </more></p>
+                <p><sm>APR 09, 2017</sm></p>
+            </div>
+
+            <div class="col-lg-6 col-lg-offset-3">
+                <div class="imgbox">
+                    <img class="img-responsive" src="assets/img/git1.png" alt="Git 實戰與障礙排除">
+                    <div class="img-content">
+                        <a href="talk/?t=Practical_Git" target="_blank" class="img-btn">
+                            READ MORE
+                        </a>
+                    </div>
+                </div>
+                <p></p>
+            </div>
+            <div class="col-lg-3">
+                <p>Git 實戰與障礙排除</p>
+                <p><more>
+                    你還在用 Dropbox、Google Drive，甚至是 FB 做版本控制嗎？
+                    俗話說：「不會 Git 的人，軟實是黑白的。」
+                    NTHU Stage 請到擁有豐富協作經驗的鄭余玄，傳授 Git 獨門秘訣。
+                    是浩全的軟實就來找隊友，是尚鴻的軟實就把隊友找來！一起迎向色彩繽紛的期末吧！
+                </more></p>
+                <p><sm>APR 04, 2017</sm></p>
+            </div>
+
+            <div class="col-lg-6 col-lg-offset-3">
+                <p><img class="img-responsive" src="assets/img/math.png" alt="清大數學營專題"></p>
+            </div>
+            <div class="col-lg-3">
+                <p>Pigeonhole Principle</p>
+                <p><more>清大數學營專題</more></p>
+                <p><sm>JUL 14, 2016</sm></p>
+            </div>
+
+            <div class="col-lg-6 col-lg-offset-3">
+                <p><t>Android 強大網路流 - Google Volley 介紹</t>&nbsp;
+                    <a href="talk/?t=Google_Volley_Intro" target="_blank">
+                        <i class='fa fa-link'></i> Material
+                    </a><br>
+                    Hsinchu Tech Chat Group @ NTHU<br>
+                </p>
+                <p><more></more></p>
+            </div>
+            <div class="col-lg-3">
+                <p><sm>APR 24, 2016</sm></p>
+            </div>
+
+            <div class="col-lg-6 col-lg-offset-3">
+                <p><t>歡樂寒假營 - Android and Java</t>&nbsp;
+                    <a href="talk/?t=Android_and_Java" target="_blank">
+                        <i class='fa fa-link'></i> Material
+                    </a><br>
+                    板橋高中資訊社<br>
+                </p>
+                <p><more></more></p>
+            </div>
+            <div class="col-lg-3">
+                <p><sm>FEB 01 - 05, 2016</sm></p>
+            </div>
+
+            <div class="col-lg-6 col-lg-offset-3">
+                <p><t>府中小吃趣 APP 發佈</t>&nbsp;
+                    <a href="https://goo.gl/RHvzrA" target="_blank">
+                        <i class='fa fa-mobile'></i> Demo
+                    </a><br>
+                    板橋高中新生訓練<br>
+                </p>
+                <p><more></more></p>
+            </div>
+            <div class="col-lg-3">
+                <p><sm>OCT 25, 2015</sm></p>
+            </div>
+
+        </div><br><br>
+    </div>
+    <!-- INTEREST -->
+    <div id="skillswrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-lg-offset-1">
+                    <h5>INTEREST</h5>
+                </div>
+                <div class="col-lg-3 centered">
+                    <p><i class='fa fa-cogs fa-3'></i></p>
+                    <p>Machine Learning</p>
                     <br>
-                </p>
-                <h3 lang="zh-Hant" class="ui header">清離子黑客松</h3>
-                <p lang="zh-Hant">
-                    2016/10/30 at 資電館 127 教室
-                    <br>清離子黑客松希望能改變校園不滿的現狀。
-                    <br>聚集校園中的各路好漢，也集合各種創意無限的好點子。
-                    <br>運用大家所學的能力，動手解決你我在清大校園中遇到的種種問題！
-                </p>
-                <h3 lang="zh-Hant" class="ui header">高等微積分讀書會 - Lambda Calculus</h3>
-                <p lang="zh-Hant">
-                    2016/8/3 at 國立清華大學
-                    <br>本次導讀範圍主要是從 <a href="//flolac.iis.sinica.edu.tw/flolac16/" hreflang="zh-Hant" target="_blank">flolac'16</a> 中取材
-                    <br>範圍包括 Elementary Logic, Lambda Calculus and Types, Martin-Löf Type Theory, (Naive Set Theory, Formal Languages, etc.)
-                </p>
-            </div>
-        </div>
-
-        <div class="ui inverted vertical footer segment">
-            <div class="ui container">
-                <div class="ui stackable inverted divided equal height stackable grid">
-                    <div class="three wide column">
-                        <h4 class="ui inverted header">About me</h4>
-                        <div class="ui inverted link list">
-                            <a href="//www.facebook.com/chengcos" hreflang="zh-Hant" target="_blank" class="item">My Facebook</a>
-                            <a href="//github.com/chengscott" hreflang="en-US" target="_blank" class="item">My Github</a>
-                            <a href="//codestreams.blogspot.tw/" hreflang="zh-Hant" target="_blank" class="item">Codestreams</a>
-                        </div>
-                    </div>
-                    <div class="three wide column">
-                        <h4 class="ui inverted header">Organizations</h4>
-                        <div class="ui inverted link list">
-                            <a href="//nthuion.cs.nthu.edu.tw/" hreflang="zh-Hant" target="_blank" class="item">NTHU ION</a>
-                            <a href="//acm.cs.nthu.edu.tw/" hreflang="zh-Hant" target="_blank" class="item">NTHUOJ</a>
-                            <a href="//pcshic.github.io/" hreflang="en-US" target="_blank" class="item">PCSHIC</a>
-                        </div>
-                    </div>
-                    <div class="seven wide column">
-                        <h4 class="ui inverted header">Site</h4>
-                        <div class="ui inverted link list">
-                            <a href="#" class="item">Sitemap</a>
-                            <a href="//goo.gl/forms/ASUOHJ8l8a" hreflang="en-US" target="_blank" class="item">Error Report</a>
-                        </div>
-                    </div>
                 </div>
+                <div class="col-lg-3 centered">
+                    <p><i class='fa fa-server fa-3'></i></p>
+                    <p>HPC</p>
+                    <br>
+                </div>
+                <div class="col-lg-3 centered">
+                    <p><i class='fa fa-bolt fa-3'></i></p>
+                    <p>Agile</p>
+                    <br>
+                </div>
+            </div><br>
+        </div>
+    </div>
+    <!-- PROJECT Section -->
+    <section id="project" name="project"></section>
+    <!-- PROJECT -->
+    <div class="container desc">
+        <div class="row">
+
+            <div class="col-lg-2 col-lg-offset-1">
+                <h5>PROJECT</h5>
             </div>
+
+            <div class="col-lg-6">
+                <p><t>Trafuko</t>&nbsp;
+                    <a href="https://github.com/chengscott/Trafuko-Web" target="_blank">
+                        <i class='fa fa-laptop'></i> Web
+                    </a>&nbsp;
+                    <a href="https://github.com/chengscott/Trafuko-Mobile" target="_blank">
+                        <i class='fa fa-mobile'></i> Mobile
+                    </a><br>
+                    Software Studio Term Project<br>
+                </p>
+                <p><more></more></p>
+            </div>
+            <div class="col-lg-3">
+                <p><sm>2017</sm></p>
+            </div>
+
+            <div class="col-lg-6 col-lg-offset-3">
+                <p><t>火の人工知能玄</t>&nbsp;
+                    <a href="https://github.com/chengscott/AIhsuanOnFire" target="_blank">
+                        <i class='fa fa-fire'></i> Report
+                    </a><br>
+                    AI Final Project - 火の人工知能玄<br>
+                </p>
+                <p><more>
+                    Implement a forest fire risk assessment system to model the
+                    unknown burned area using the Bayesian belief networks (BBN).
+                </more></p>
+            </div>
+            <div class="col-lg-3">
+                <p><sm>2017</sm></p>
+            </div>
+
+            <div class="col-lg-6 col-lg-offset-3">
+                <p><t>GGCheersBar</t>&nbsp;
+                    <a href="https://github.com/chengscott/GGCheersBar" target="_blank">
+                        <i class='fa fa-paper-plane-o'></i> Demo
+                    </a><br>
+                    AI Midterm Project - MCTS gomoku<br>
+                </p>
+                <p><more>
+                    Implement a computer program that uses Monte Carlo Tree Search
+                    to play a five-in-a-line in a Go-game board of 15 by 15.
+                </more></p>
+            </div>
+            <div class="col-lg-3">
+                <p><sm>2017</sm></p>
+            </div>
+
+            <div class="col-lg-6 col-lg-offset-3">
+                <p><t>EigenNote</t>&nbsp;
+                    <a href="https://github.com/chengscott/eigennote-prototype" target="_blank">
+                        <i class='fa fa-code'></i> Demo
+                    </a><br>
+                    An app to scan and categorize notes.<br>
+                </p>
+                <p><more></more></p>
+            </div>
+            <div class="col-lg-3">
+                <p><sm>2016</sm></p>
+            </div>
+
+            <div class="col-lg-6 col-lg-offset-3">
+                <p><t>府中小吃趣</t>&nbsp;
+                    <a href="http://pcshjq.github.io" target="_blank">
+                        <i class='fa fa-mobile'></i>
+                    </a>&nbsp;
+                    <a href="https://play.google.com/store/apps/details?id=io.github.pcshjq" target="_blank">
+                        <i class='fa fa-play'></i> Google Play
+                    </a><br>
+                    以板中（捷運府中站）為中心，搜尋附近的小吃店，讓學校師生不再煩惱三餐要吃甚麼！<br>
+                </p>
+                <p><more></more></p>
+            </div>
+            <div class="col-lg-3">
+                <p><sm>2015</sm></p>
+            </div>
+
+            <div class="col-lg-6 col-lg-offset-3">
+                <p><t>Simulated Biome</t><br>
+                    A simlution of interactions between species.<br>
+                </p>
+                <p><more></more></p>
+            </div>
+            <div class="col-lg-3">
+                <p><sm>2015</sm></p>
+            </div>
+
+            <div class="col-lg-6 col-lg-offset-3">
+                <p><t>Zinc</t><br>
+                    Customized web browser with IE core.<br>
+                </p>
+                <p><more></more></p>
+            </div>
+            <div class="col-lg-3">
+                <p><sm>2012</sm></p>
+            </div>
+
+            <div class="col-lg-6 col-lg-offset-3">
+                <p><t>Email Sender</t><br>
+                    A software to send email.<br>
+                </p>
+                <p><more></more></p>
+            </div>
+            <div class="col-lg-3">
+                <p><sm>2012</sm></p>
+            </div>
+
+        </div><br><br>
+    </div>
+    <!-- FOOTWRAP -->
+    <div id="footwrap">
+        <div class="container">
+            <a class="smoothScroll" href='#header'><i class='fa fa-chevron-up'></i></a>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <div id="footer">
+        <div class="container">
+            <p>MIT LICENSE</p>
         </div>
     </div>
 </body>
