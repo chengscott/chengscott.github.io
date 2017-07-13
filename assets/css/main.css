@@ -1,10 +1,4 @@
-/* Author: Carlos Alvarez
-* URL: http://alvarez.is
-*
-* Project Name: Kelvin - Free Bootstrap 3 Resume Theme
-* Version: 1.0
-* URL: http://blacktie.co
-*/
+/* Kelvin Template from http://blacktie.co */
 
 body {
     background-color: #f2f2f2;
@@ -87,11 +81,11 @@ hr {
 }
 
 #section-topbar a {
-    color: #fff;
+    color: white;
 }
 
 #topbar-inner {
-    background: #0C2136;
+    background: #0c2136;
     line-height: 0;
     text-align: center;
 }
@@ -114,18 +108,27 @@ hr {
     padding: 0;
 }
 
+#section-topbar ul#nav > li.active a {
+    background: #222;
+    text-decoration: none;
+    border-left: 1px solid #111;
+}
+
 #section-topbar ul#nav a {
     display: block;
     font: normal 11px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-decoration: none;
     padding: 18px 20px 18px 20px;
+    text-decoration: none;
     border-left: 1px solid #222;
 }
 
 #section-topbar ul#nav a:hover {
-    background: #222;
-    text-decoration: none;
+    background: #2c3e50;
     border-left: 1px solid #111;
+}
+
+#section-topbar ul#nav a:focus {
+    background: #0c2136;
 }
 
 #section-topbar i {
@@ -140,8 +143,8 @@ hr {
 #headerwrap {
     background: url(../img/header-bg.jpg) no-repeat center top;
     margin-top: 60px;
-    padding-top:140px;
-    text-align:center;
+    padding-top: 140px;
+    text-align: center;
     background-attachment: relative;
     background-position: center center;
     min-height: 500px;
@@ -217,13 +220,13 @@ hr {
 /* Footer */
 
 #footer {
-    background: #222222;
+    background: #222;
     padding-top: 15px;
     text-align: right;
 }
 
 #footer p {
-    color: white
+    color: white;
 }
 
 /**
@@ -265,12 +268,13 @@ hr {
     background-color: white;
     opacity: 1;
     padding: 12px 30px 12px 30px;
-    border: 1px solid #A9894A;
+    border: 1px solid #a9894a;
     transition: .3s;
 }
 
 .imgbox .img-btn:hover {
-    border: 1px solid #7b7b7b;
+    background-color: #a9894a;
+    color: white;
 }
 
 /* desc */

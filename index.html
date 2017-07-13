@@ -7,7 +7,7 @@
     <meta name="google-site-verification" content="f3txyGzdHNConuCa-eu0H_UCAZ80WlfuvDoE1XDuZJM">
     <meta name="description" content="鄭余玄的個人網頁 - 部落格、專案、演講">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="theme-color" content="#1976d2">
+    <meta name="theme-color" content="#0c2136">
     <meta name="mobile-web-app-capable" content="yes">
     <title>鄭余玄 | chengscott</title>
 
@@ -53,7 +53,7 @@
     </script>
 </head>
 
-<body data-spy="scroll" data-offset="0" data-target="#nav">
+<body data-spy="scroll" data-offset="50" data-target="#section-topbar">
     <!-- Top Section Bar -->
     <div id="section-topbar">
         <div id="topbar-inner">
@@ -61,17 +61,15 @@
                 <div class="row">
                     <div class="dropdown">
                         <ul id="nav" class="nav">
-                            <li class="menu-item"><a class="smoothScroll" href="#about" title="About"><i class="fa fa-user"></i></a></li>
-                            <li class="menu-item"><a class="smoothScroll" href="#activity" title="Activity"><i class="fa fa-users"></i></a></li>
-                            <li class="menu-item"><a class="smoothScroll" href="#talk" title="Talk"><i class="fa fa-desktop"></i></a></li>
-                            <li class="menu-item"><a class="smoothScroll" href="#project" title="Project"><i class="fa fa-briefcase"></i></a></li>
+                            <li><a href="#about" title="About" class="smoothScroll"><i class="fa fa-user"></i></a></li>
+                            <li><a href="#activity" title="Activity" class="smoothScroll"><i class="fa fa-users"></i></a></li>
+                            <li><a href="#talk" title="Talk" class="smoothScroll"><i class="fa fa-desktop"></i></a></li>
+                            <li><a href="#project" title="Project" class="smoothScroll"><i class="fa fa-briefcase"></i></a></li>
                         </ul>
                     </div>
-
                     <div class="clear"></div>
                 </div>
             </div>
-
             <div class="clear"></div>
         </div>
     </div>
@@ -261,7 +259,7 @@
             <div class="col-lg-6">
                 <div class="imgbox">
                     <img class="img-responsive" src="assets/img/git2.png" alt="Git 深入淺出">
-                    <div class="img-content">
+                    <div class="img-content centered">
                         <a href="talk/?t=Head_First_Git" target="_blank" class="img-btn">
                             READ MORE
                         </a>
@@ -283,7 +281,7 @@
             <div class="col-lg-6 col-lg-offset-3">
                 <div class="imgbox">
                     <img class="img-responsive" src="assets/img/git1.png" alt="Git 實戰與障礙排除">
-                    <div class="img-content">
+                    <div class="img-content centered">
                         <a href="talk/?t=Practical_Git" target="_blank" class="img-btn">
                             READ MORE
                         </a>
@@ -386,20 +384,25 @@
             <div class="col-lg-2 col-lg-offset-1">
                 <h5>PROJECT</h5>
             </div>
-
             <div class="col-lg-6">
-                <p><t>Trafuko</t>&nbsp;
-                    <a href="https://github.com/chengscott/Trafuko-Web" target="_blank">
-                        <i class='fa fa-laptop'></i> Web
-                    </a>&nbsp;
-                    <a href="https://github.com/chengscott/Trafuko-Mobile" target="_blank">
-                        <i class='fa fa-mobile'></i> Mobile
-                    </a><br>
-                    Software Studio Term Project<br>
-                </p>
-                <p><more></more></p>
+                <div class="imgbox">
+                    <img class="img-responsive" src="assets/img/Trafuko.png" alt="Trafuko">
+                    <div class="img-content centered">
+                        <a href="https://github.com/chengscott/Trafuko-Web" target="_blank" class="img-btn">
+                            <i class='fa fa-laptop'></i> Web
+                        </a><br>
+                        <a href="https://github.com/chengscott/Trafuko-Mobile" target="_blank" class="img-btn">
+                            <i class='fa fa-mobile'></i> Mobile
+                        </a>
+                    </div>
+                </div>
+                <p></p>
             </div>
             <div class="col-lg-3">
+                <p>Trafuko</p>
+                <p><more>
+                    Software Studio Term Project
+                </more></p>
                 <p><sm>2017</sm></p>
             </div>
 
@@ -420,47 +423,64 @@
             </div>
 
             <div class="col-lg-6 col-lg-offset-3">
-                <p><t>GGCheersBar</t>&nbsp;
-                    <a href="https://github.com/chengscott/GGCheersBar" target="_blank">
-                        <i class='fa fa-paper-plane-o'></i> Demo
-                    </a><br>
-                    AI Midterm Project - MCTS gomoku<br>
-                </p>
+                <div class="imgbox">
+                    <img class="img-responsive" src="assets/img/GGCheersBar.png" alt="GGCheersBar">
+                    <div class="img-content centered">
+                        <a href="https://github.com/chengscott/GGCheersBar" target="_blank" class="img-btn">
+                            <i class='fa fa-paper-plane-o'></i> Demo
+                        </a>
+                    </div>
+                </div>
+                <p></p>
+            </div>
+            <div class="col-lg-3">
+                <p>GGCheersBar</p>
                 <p><more>
+                    AI Midterm Project - MCTS gomoku<br>
                     Implement a computer program that uses Monte Carlo Tree Search
                     to play a five-in-a-line in a Go-game board of 15 by 15.
                 </more></p>
-            </div>
-            <div class="col-lg-3">
-                <p><sm>2017</sm></p>
-            </div>
-
-            <div class="col-lg-6 col-lg-offset-3">
-                <p><t>EigenNote</t>&nbsp;
-                    <a href="https://github.com/chengscott/eigennote-prototype" target="_blank">
-                        <i class='fa fa-code'></i> Demo
-                    </a><br>
-                    An app to scan and categorize notes.<br>
-                </p>
-                <p><more></more></p>
-            </div>
-            <div class="col-lg-3">
                 <p><sm>2016</sm></p>
             </div>
 
             <div class="col-lg-6 col-lg-offset-3">
-                <p><t>府中小吃趣</t>&nbsp;
-                    <a href="http://pcshjq.github.io" target="_blank">
-                        <i class='fa fa-mobile'></i>
-                    </a>&nbsp;
-                    <a href="https://play.google.com/store/apps/details?id=io.github.pcshjq" target="_blank">
-                        <i class='fa fa-play'></i> Google Play
-                    </a><br>
-                    以板中（捷運府中站）為中心，搜尋附近的小吃店，讓學校師生不再煩惱三餐要吃甚麼！<br>
-                </p>
-                <p><more></more></p>
+                <div class="imgbox">
+                    <img class="img-responsive" src="assets/img/EigenNote.png" alt="EigenNote">
+                    <div class="img-content centered">
+                        <a href="https://github.com/chengscott/eigennote-prototype" target="_blank" class="img-btn">
+                            <i class='fa fa-mobile'></i> Demo
+                        </a>
+                    </div>
+                </div>
+                <p></p>
             </div>
             <div class="col-lg-3">
+                <p>EigenNote</p>
+                <p><more>
+                    An app to scan and categorize notes.
+                </more></p>
+                <p><sm>2016</sm></p>
+            </div>
+
+            <div class="col-lg-6 col-lg-offset-3">
+                <div class="imgbox">
+                    <img class="img-responsive" src="assets/img/PCSHJQ.png" alt="府中小吃趣">
+                    <div class="img-content centered">
+                        <a href="https://play.google.com/store/apps/details?id=io.github.pcshjq" target="_blank" class="img-btn">
+                            <i class='fa fa-play'></i> Google Play
+                        </a><br>
+                        <a href="http://pcshjq.github.io" target="_blank" class="img-btn">
+                            <i class='fa fa-mobile'></i> Demo
+                        </a>
+                    </div>
+                </div>
+                <p></p>
+            </div>
+            <div class="col-lg-3">
+                <p>府中小吃趣</p>
+                <p><more>
+                    以板中（捷運府中站）為中心，搜尋附近的小吃店，讓學校師生不再煩惱三餐要吃甚麼！
+                </more></p>
                 <p><sm>2015</sm></p>
             </div>
 
