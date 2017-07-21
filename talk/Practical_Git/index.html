@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="f3txyGzdHNConuCa-eu0H_UCAZ80WlfuvDoE1XDuZJM">
+    <meta name="description" content="鄭余玄的演講 - Git 實戰與障礙排除" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#222222">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>鄭余玄 | chengscott</title>
+
+    <!-- Icon -->
+    <link href="../../assets/ico/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+    <link href="../../assets/ico/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+    <link href="../../assets/ico/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="../../assets/ico/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+    <link href="../../assets/ico/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="../../assets/ico/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+    <link href="../../assets/ico/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+    <link href="../../assets/ico/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+    <link href="../../assets/ico/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="../../assets/ico/android-icon-192x192.png" rel="icon" type="image/png" sizes="192x192">
+    <link href="../../assets/ico/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="../../assets/ico/favicon-96x96.png" rel="icon" type="image/png" sizes="96x96">
+    <link href="../../assets/ico/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="../../assets/ico/manifest.json" rel="manifest">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../../assets/css/main.css" rel="stylesheet">
+    <!-- Font -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet'>
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-73021613-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+</head>
+
+<body>
+    <!-- Top Section Bar -->
+    <div id="section-topbar">
+        <div id="topbar-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="dropdown">
+                        <ul id="nav" class="nav">
+                            <li><a href="../../#about" title="About"><i class="fa fa-user"></i></a></li>
+                            <li><a href="../../#activity" title="Activity"><i class="fa fa-users"></i></a></li>
+                            <li class="active"><a href="../../#talk" title="Talk" active><i class="fa fa-desktop"></i></a></li>
+                            <li><a href="../../#project" title="Project"><i class="fa fa-briefcase"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <!-- TALK -->
+    <div class="container desc" style="height:100vh">
+        <div class="row">
+            <div><p><p></div>
+            <div class="col-lg-2 col-lg-offset-1">
+                <h5>TALK</h5>
+            </div>
+            <div class="col-lg-6">
+                <header>
+                    <h2>Git 實戰與障礙排除</h2>
+                    <p><more>
+                        你還在用 Dropbox、Google Drive，甚至是 FB 做版本控制嗎？
+                        俗話說：「不會 Git 的人，軟實是黑白的。」
+                        NTHU Stage 請到擁有豐富協作經驗的鄭余玄，傳授 Git 獨門秘訣。
+                        是浩全的軟實就來找隊友，是尚鴻的軟實就把隊友找來！一起迎向色彩繽紛的期末吧！
+                    </more></p>
+                </header>
+                <div>
+                    <h3>Outline</h3>
+                    <ul>
+                        <li>Git 版本控制摘要</li>
+                        <li>Git 環境設定</li>
+                        <li>本機端版本管理
+                            <ul>
+                                <li>新增與提交版本</li>
+                                <li>狀態與歷史紀錄</li>
+                            </ul>
+                        </li>
+                        <li>追蹤程式碼倉儲
+                            <ul>
+                                <li>Clone 和 Fork</li>
+                                <li>追蹤本地和遠端分支</li>
+                                <li>Push 和 Pull 同步工作</li>
+                            </ul>
+                        </li>
+                        <li>還原變更</li>
+                        <li>分支合併：Merge
+                            <ul>
+                                <li>Merge Conflict</li>
+                                <li>技巧和策略</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Demo</h3>
+                    <p>
+                        Demo repo:
+                        <a href="https://github.com/chengscott/git-demo" target="_blank" rel="noopener" hreflang="en-US">
+                            git-demo
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://hackmd.io/p/HJl2_4kag#/" target="_blank" rel="noopener" hreflang="zh-Hant">
+                            投影片在這裡！！
+                        </a>
+                    </p>
+                    <p>
+                        拜託大家幫忙
+                        <a href="https://chengscott.typeform.com/to/rnX0oR" target="_blank" rel="noopener" hreflang="zh-Hant">
+                            填個問卷
+                        </a>
+                        ，感謝 TAT
+                    </p>
+                    <p>
+                        <iframe
+                            title="Git 實戰與障礙排除"
+                            src="https://www.youtube.com/embed/gI8sBix2EwQ"
+                            width="560"
+                            height="315"
+                            frameborder="0"
+                            allowfullscreen>
+                        </iframe>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <p><sm>
+                    APR 05, 2017 19:30~22:30<br>
+                    EECS Building MAC
+                </sm></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
