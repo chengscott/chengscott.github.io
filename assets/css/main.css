@@ -26,8 +26,7 @@ th, td {
 }
 
 tr:hover td:not(:empty) {
-   background: #95a5a6;
-   color: white;
+   background: #b7cbcc;
 }
 
 /* Titles */
