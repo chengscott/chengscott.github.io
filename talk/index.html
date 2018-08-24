@@ -18,22 +18,7 @@
     ga('create', 'UA-73021613-1', 'auto');
     ga('send', 'pageview');
 
-    function getParameterByName(name) {
-        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)'),
-            results = regex.exec(location.search);
-        return results === null ? '' :
-            decodeURIComponent(results[1].replace(/\+/g, ' '));
-    }
-
-    var talk = [
-        'Android_and_Java',
-        'Google_Volley_Intro',
-        'Head_First_Git',
-        'Practical_Git',
-    ];
-    window.location.href = talk.indexOf(getParameterByName('t')) == -1 ?
-        './../#talk' : getParameterByName('t');
+    window.location.href = '../#talk';
     </script>
 </head>
 <body></body>
