@@ -325,9 +325,13 @@ hr {
 }
 
 sm {
-    font-size: 12px;
+    font-size: 15px;
 }
 
 .fa-3 {
     font-size: 5em;
+}
+
+.item {
+    margin-bottom: 0;
 }
